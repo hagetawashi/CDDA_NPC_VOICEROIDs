@@ -1,0 +1,220 @@
+[
+  {
+    "id": [ "TALK_INTERCTION_YUKARI" ],
+    "type": "talk_topic",
+    "dynamic_line": {
+    	"concatenate": [
+    		{ "npc_has_trait": "band_lv0",
+    			"yes": [ "あ、はい！\nど、どうかしました？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "…ひょえっ！？あ、な、何か用事でも？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "な、なんでしょう？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    			"no": {
+    				"npc_has_trait": "band_lv1",
+    				"yes": [ "ふっふっふっ、ゆかりさんの助言が欲しいようで…あ、違う？\nそうですか…\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "休憩ですか？\nそれじゃあ何か話しましょう！\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "お話ですか？\n……えっと、いい天気ですね？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    				"no": {
+    					"npc_has_trait": "band_lv2",
+    					"yes": [ "どうしました？\n私に何か用事ですか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "話したいことがあれば遠慮せずに言ってくださいね\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "何か聞きたいことでもありますか？\nいいでしょう、ではプロサバイバーゆかりさんがサバイバルのコツを…あ、いらない？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    					"no": {
+    						"npc_has_trait": "band_lv3",
+    						"yes": [ "時間があればお話し、しませんか？\n現在好感度: <npc_val:counter_var_adjust_band_band_count>", "少し休憩しましょう？\nほら、隣座ってください\n現在好感度: <npc_val:counter_var_adjust_band_band_count>", "えっ、ゆかりさんとお話したくてしょうがないって？\nふふふ、しょうがないなぁ…ってなんですか、その冷めた目は\n現在好感度: <npc_val:counter_var_adjust_band_band_count>" ],
+    						"no": {
+    							"npc_has_trait": "band_lv4",
+    							"yes": [ "あっ…うー…。\nな、何かお話…します？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "<u_name>さんとお話するの少し緊張します…。\nなんでって、それは…ねえ？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "あ、あの！\n少し休憩にして私とお話しましょう！\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    							"no": [ "<u_name>、無理してませんか？\n少し休憩しましょ？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "あ、お話します？\nえへへ、待ってました♪\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "どうしました、<u_name>。\nあ、もしかしてゆかりさんに見惚れてました？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ]
+    								}
+    							}
+    						}
+    					}
+    				}
+    			]
+    	},
+    "responses": [
+    	{
+    	"//": "ランダムNPC用選択肢群",
+    	"condition": 
+		{ "not": {
+			"or": [ 
+				{ "u_has_effect": "band_talk_end" },
+				{ "npc_has_effect": "band_talk_end" }
+				]
+			}
+		},
+    	"text": "会話する",
+    	"topic": "TALK_NO_ITEM_YUKARI"
+    	},
+    	{
+    	"//": "全部作ると飲食は差分が膨大になるので次の選択肢でアイテムを限定する",
+    	"condition": 
+		{ "not": {
+			"or": [ 
+				{ "u_has_effect": "band_talk_end" },
+				{ "npc_has_effect": "band_talk_end" }
+				]
+			}
+		},
+    	"text": "食べながら会話する",
+    	"topic": "TALK_EAT_ITEM_YUKARI"
+    	},
+    	{
+    	"text": "弁当を作ってもらう",
+    	"topic": "TALK_MAIKING_BENTO",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_has_any_trait": [ "band_lv4", "band_lv5" ] },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 50 }
+    			]
+    		}
+    	},
+    	{
+    	"text": "銃弾を作ってもらう",
+    	"topic": "TALK_MAKNG_BULLET",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+    			{ "npc_has_any_trait": [ "band_lv1", "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] }
+    		]
+    	    }
+    	},
+    	{
+    	"text": "ユニーク品を作ってもらう",
+    	"topic": "TALK_MAKING_Y_ITEMS",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+    			{ "npc_has_any_trait": [ "band_lv1", "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] }
+    		]
+    	    }
+    	},
+    	{
+        "text": "絆を深める（LV1）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+        		{ "npc_has_trait" : "band_lv0" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv0" }, { "npc_add_trait": "band_lv1" }, { "u_message": "<npc_name>との絆が深まりました！\n二人はもはや友人と呼べるでしょう！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（LV2）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 20 },
+        		{ "npc_has_trait" : "band_lv1" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv1" }, { "npc_add_trait": "band_lv2" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>は背中を預けるに足る相手だと感じます！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（LV3）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 30 },
+        		{ "npc_has_trait" : "band_lv2" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv2" }, { "npc_add_trait": "band_lv3" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世界で最も得難い宝と言えます！", "popup": true} ]
+       },
+       {
+        "text": "絆を深める（EX）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 50 },
+        		{ "npc_has_trait" : "band_lv3" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv3" }, { "npc_add_trait": "band_lv4" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世で最も特別な存在になりました！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（EX+）",
+        "topic": "TALK_CHAIN_EXP",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 150 },
+        		{ "npc_has_trait" : "band_lv4" }
+        	]
+        }
+      },
+       {
+    	"text": "戻る",
+    	"topic": "TALK_NONE"
+   },
+    {
+    	"text": "交流を終える",
+    	"topic": "TALK_DONE"
+    }
+   ]
+   },
+   {
+     "id": [ "TALK_NO_ITEM_YUKARI" ],
+     "type": "talk_topic",
+     "dynamic_line": {
+    	"concatenate": [
+    		{ "npc_has_trait": "band_lv0",
+    			"yes": [ "これからどうしましょうか…\n何かプランはありますか？", "あの…ええっと…。\nわ、話題が思いつかない…ごめんなさい", "みんな無事かな…すごく心配なんです" ],
+    			"no": {
+    				"npc_has_trait": "band_lv1",
+    				"yes": [ "本当にプロサバイバーなのかって？\nあ、あた、当たり前じゃないですか！", "実は会話って苦手なんです…え、なんとなくわかる？\nあうぅ…", "えっと、この後の食事は何にしましょうか？", "私の好きなものですか？\nそうですねぇ…挽肉とチーズの入ったジャンクなアレとか大好きですね" ],
+    				"no": {
+    					"npc_has_trait": "band_lv2",
+    					"yes": [ "<u_name>さん、ここだけの話なんですけど…。\nわ、私の書いたアレ、そんなに役に立たなかったですか？", "今でこそアウトドア派なゆかりさんですが、以前はゲーム実況なんかが好きでインドア派だったんですよ。\n平和になったら私のチャンネルに是非遊びに来てくださいね？コラボしましょう、コラボ", "実は料理が得意なんですよ、私。\nそのうち何か作ってあげますね！" ],
+    					"no": {
+    						"npc_has_trait": "band_lv3",
+    						"yes": [ "今はこの時間が楽しみなんです。\nあなたと会話してるととても落ち着くので…ふふっ", "好きなもの？\n今頃聞きますか…友人とゲーム実況ですね。\n<u_name>さんは…ふふ、内緒です♪", "この後はどこに行きましょうか？\n私はどこにでも付いて行きますよ" ],
+    						"no": {
+    							"npc_has_trait": "band_lv4",
+    							"yes": [ "好きなもの？\n……もー、また聞くんですか、それ？\n……<u_name>さんですよ", "大変動に巻き込まれてちょっとだけ…良かったと思ってます。\nだってあなたと出会えたんですから…なんて", "あの…手…。\n……手、握ってもらってもいいですか？" ],
+    							"no": [ "えへ、えへへへ…。\n（指輪を眺めてニヤニヤしている…）", "んっ！ん～っ！\n…痛っ！？\n（何かをせがむ様に目を閉じていたのでデコピンしてみた…）", "時々、朝起きた時に今の幸せは全部夢で、実はゾンビに囲まれて死にかけてるんじゃないかって怖くなって飛び起きるんです。\nそれで、隣で<u_name>が寝てるのを見るとほっとするんです…。\nあ、いや、その…イタズラなんてしてませんよ？ほんとほんと…あはは…" ]
+    							}
+    						}
+    					}
+    				}
+    		}
+    	]
+    	},
+    "responses": [
+    	{
+    		"text": "<band_talk_answer>",
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": [ 3, 5 ] },
+    			{ "u_message": "腰を下ろしてゆっくりと会話しました。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 }
+    	]
+   },
+   {
+     "id": [ "TALK_EAT_ITEM_YUKARI" ],
+     "type": "talk_topic",
+     "dynamic_line": "あれ、食事の時間はまだでは…あ、おやつですか？",
+     "repeat_responses": [
+		{
+		  "for_item": [ "fruit_leather", "protein_bar_evac", "cherries", "watermelon_wedge", "apple_sugar", "onigiri", "chestnut_roasted", "candycigarette", "candy_bracelet", "pear" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+1" }
+		},
+		{
+		  "for_item": [ "sandwich_fairy", "sandwich_fairy_wheat_free", "foodplace_snack_bar", "banana", "icecream_fruit", "grapes", "apple", "puesadilla_cheese", "juice", "walnut_roasted" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+2" }
+		},
+		{
+		  "for_item": [ "toastem4", "foodplace_food", "pie", "foie_gras", "cracklins", "coffee", "tea", "sandwich_cheese", "sandwich_cheese_wheat_free", "sandwich_honey", "sandwich_honey_wheat_free", "drink_strawberry_surprise" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+3" }
+		},
+		{
+		  "for_item": [ "waffles", "bread_garlic", "cloutie_dumpling", "sourdough_bread", "sandwich_egg_salad", "sandwich_cheese_grilled", "horchata", "crispycran", "lemonade","dandelionburdock_fried" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+4" }
+		},
+		{
+		  "for_item": [ "choc_waffles", "fruit_waffles", "toad_in_a_hole", "ravioli", "Dana_sourdough_bread", "sauerkraut_onions", "fruit_pancakes", "tea_fruit", "hot_chocolate", "deluxe_cheeseburger", "deluxe_cheeseburger_wheat_free" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+5" }
+		},
+		{
+		  "for_item": [ "nachosmc", "icecream_candy", "icecream_choc" ],
+		  "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+EX" }
+		}
+	  ],
+	   "responses": [ { "text": "戻る", "topic": "TALK_NONE" } ]
+	 }
+]

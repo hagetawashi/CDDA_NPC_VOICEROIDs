@@ -1,0 +1,10 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "NPC_kiritan",
+    "name": "召喚 - NPC VOICEROIDs",
+    "authors": [ "hage" ],
+    "description": "ユニークなVOICEROIDのNPCを召喚するアイテムを追加し、NPCとより親密になるシステムを追加します。",
+    "dependencies": [ "VOICEROID_mod" ]
+  }
+]
