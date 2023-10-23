@@ -84,10 +84,10 @@
       {
         "condition": "ALWAYS",
         "values": [
-            { "value": "STRENGTH", "add": { "arithmetic": [ { "u_val": "var", "var_name": "band_count", "type": "counter", "context": "var_adjust_band" }, "/", { "const": 100 } ] } },
-            { "value": "DEXTERITY", "add": { "arithmetic": [ { "u_val": "var", "var_name": "band_count", "type": "counter", "context": "var_adjust_band" }, "/", { "const": 100 } ] } },
-            { "value": "INTELLIGENCE", "add": { "arithmetic": [ { "u_val": "var", "var_name": "band_count", "type": "counter", "context": "var_adjust_band" }, "/", { "const": 100 } ] } },
-            { "value": "PERCEPTION", "add": { "arithmetic": [ { "u_val": "var", "var_name": "band_count", "type": "counter", "context": "var_adjust_band" }, "/", { "const": 100 } ] } }
+            { "value": "STRENGTH", "add": {"math": ["u_counter_var_adjust_band_band_count / 100"] } },
+            { "value": "DEXTERITY", "add": {"math": ["u_counter_var_adjust_band_band_count / 100"] } },
+            { "value": "INTELLIGENCE", "add": {"math": ["u_counter_var_adjust_band_band_count / 100"] } },
+            { "value": "PERCEPTION", "add": {"math": ["u_counter_var_adjust_band_band_count / 100"] } }
         ]
       }
     ]
