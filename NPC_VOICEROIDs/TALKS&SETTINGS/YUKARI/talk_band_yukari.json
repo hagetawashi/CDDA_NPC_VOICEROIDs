@@ -162,7 +162,6 @@
           { "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
           { "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
           { "math": [ "n_counter_var_love_points_love_point", "+=", "rand(4) + 3" ] },
-          { "math": [ "n_counter_var_love_points_love_point", "=", "100" ] },
           {
             "u_message": "腰を下ろしてゆっくりと会話しました。\n好感度が少し上がりました。",
             "popup": true
