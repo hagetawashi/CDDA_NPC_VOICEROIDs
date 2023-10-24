@@ -1,5 +1,5 @@
 [
-   {
+  {
     "type": "npc",
     "id": "AKANE",
     "name_unique": "茜",
@@ -90,21 +90,22 @@
   {
     "type": "npc_class",
     "id": "akane",
-    "name": "天真爛漫天然系（妹評）" ,
+    "name": "天真爛漫天然系（妹評）",
     "job_description": "うちが巷で噂の茜ちゃんやで！よろしくな！",
-    "traits": [ { "trait": "VOIRO_BODY_AKANE" },
-                 { "trait": "PRETTY" },
-                 { "trait": "STYLISH" },
-                 { "trait": "BOOMING_VOICE" },
-                 { "trait": "ADRENALINE" },
-                 { "trait": "OPTIMISTIC" },
-                 { "trait": "PROJUNK" },
-                 { "trait": "CLUMSY" },
-                 { "trait": "HEAVYSLEEPER" },
-                 { "trait": "TABLEMANNERS" },
-                 { "trait": "TRUTHTELLER" }
-               ],
-    "bonus_str": { "rng": [0, 1 ] },
+    "traits": [
+      { "trait": "VOIRO_BODY_AKANE" },
+      { "trait": "PRETTY" },
+      { "trait": "STYLISH" },
+      { "trait": "BOOMING_VOICE" },
+      { "trait": "ADRENALINE" },
+      { "trait": "OPTIMISTIC" },
+      { "trait": "PROJUNK" },
+      { "trait": "CLUMSY" },
+      { "trait": "HEAVYSLEEPER" },
+      { "trait": "TABLEMANNERS" },
+      { "trait": "TRUTHTELLER" }
+    ],
+    "bonus_str": { "rng": [ 0, 1 ] },
     "bonus_dex": { "rng": [ -1, 0 ] },
     "bonus_int": { "rng": [ -1, 1 ] },
     "bonus_per": { "rng": [ 0, 1 ] },
@@ -121,7 +122,7 @@
     "weapon_override": "akane_wield",
     "common": false
   },
-    {
+  {
     "type": "item_group",
     "id": "akane_worn",
     "subtype": "collection",
@@ -130,24 +131,22 @@
       { "item": "panties" },
       { "item": "voiro_socks_akane" },
       { "item": "voiro_dress_akane" },
-       { "item": "voiro_dress_sode_akane" },
+      { "item": "voiro_dress_sode_akane" },
       { "item": "voiro_boots_akane" },
       { "item": "voiro_ornament_akane" },
       { "item": "mbag" }
     ]
-   },
-   {
+  },
+  {
     "type": "item_group",
     "id": "akane_carried",
     "subtype": "collection",
-    "entries": [ 
-        { "item": "ref_lighter_butane", "ammo-item": "butane_can", "charges": 21 }
-               ]
-   },
-   {
+    "entries": [ { "item": "ref_lighter_butane", "ammo-item": "butane_can", "charges": 21 } ]
+  },
+  {
     "type": "item_group",
     "id": "akane_wield",
     "subtype": "collection",
-        "entries": [ { "item": "mace_pipe" } ]
-   }
+    "entries": [ { "item": "mace_pipe" } ]
+  }
 ]

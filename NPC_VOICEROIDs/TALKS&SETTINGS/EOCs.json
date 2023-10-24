@@ -17,5 +17,28 @@
     "suspendable": false,
     "based_on": "time",
     "no_resume": true
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_event_lovers_guts",
+    "eoc_type": "EVENT",
+    "required_event": "character_dies",
+    "condition": {
+      "and": [
+        { "u_has_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
+        { "math": [ "u_counter_var_love_points_love_point", ">=", "50" ] }
+      ]
+    },
+    "effect": [
+      "u_prevent_death",
+      { "u_set_hp": 45, "only_increase": true, "target_part": "torso" },
+      { "u_set_hp": 45, "only_increase": true, "target_part": "head" },
+      { "u_set_hp": 45, "only_increase": true, "target_part": "arm_l" },
+      { "u_set_hp": 45, "only_increase": true, "target_part": "arm_r" },
+      { "u_set_hp": 45, "only_increase": true, "target_part": "leg_r" },
+      { "u_set_hp": 45, "only_increase": true, "target_part": "leg_l" },
+      { "math": [ "u_counter_var_love_points_love_point", "-=", "50" ] },
+      { "u_message": "<u_name>は力を振り絞って立ち上がった！" }
+    ]
   }
 ]

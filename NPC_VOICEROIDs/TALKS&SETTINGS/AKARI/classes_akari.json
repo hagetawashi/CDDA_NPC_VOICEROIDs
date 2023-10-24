@@ -1,5 +1,5 @@
 [
-   {
+  {
     "type": "npc",
     "id": "AKARI",
     "name_unique": "あかり",
@@ -90,20 +90,21 @@
   {
     "type": "npc_class",
     "id": "akari",
-    "name": "食べ歩き大食いブロガー" ,
+    "name": "食べ歩き大食いブロガー",
     "job_description": "食べ歩きしながらブログやってるんですよね、まだ営業してるいい店知りませんか？",
-    "traits": [ { "trait": "VOIRO_BODY_AKARI" },
-                 { "trait": "GOURMAND" },
-                 { "trait": "OPTIMISTIC" },
-                 { "trait": "STRONGSTOMACH" },
-                 { "trait": "PROJUNK" },
-                 { "trait": "PRETTY" },
-                 { "trait": "ANIMALDISCORD" },
-                 { "trait": "HUNGER" },
-                 { "trait": "TABLEMANNERS" },
-                 { "trait": "STYLISH" },
-                 { "trait": "TRUTHTELLER" }
-               ],
+    "traits": [
+      { "trait": "VOIRO_BODY_AKARI" },
+      { "trait": "GOURMAND" },
+      { "trait": "OPTIMISTIC" },
+      { "trait": "STRONGSTOMACH" },
+      { "trait": "PROJUNK" },
+      { "trait": "PRETTY" },
+      { "trait": "ANIMALDISCORD" },
+      { "trait": "HUNGER" },
+      { "trait": "TABLEMANNERS" },
+      { "trait": "STYLISH" },
+      { "trait": "TRUTHTELLER" }
+    ],
     "bonus_str": { "rng": [ 0, 2 ] },
     "bonus_dex": { "rng": [ -1, 0 ] },
     "bonus_int": { "rng": [ -1, 0 ] },
@@ -121,7 +122,7 @@
     "weapon_override": "akari_wield",
     "common": false
   },
-    {
+  {
     "type": "item_group",
     "id": "akari_worn",
     "subtype": "collection",
@@ -136,28 +137,23 @@
       { "item": "voiro_ornament_akari2" },
       { "item": "mbag", "contents-group": "akari_identitys" }
     ]
-   },
-   {
+  },
+  {
     "type": "item_group",
     "id": "akari_carried",
     "subtype": "collection",
-    "entries": [ 
-        { "item": "smart_phone", "ammo-item": "battery", "charges": 120 }
-               ]
-   },
-   {
+    "entries": [ { "item": "smart_phone", "ammo-item": "battery", "charges": 120 } ]
+  },
+  {
     "type": "item_group",
     "id": "akari_wield",
     "subtype": "collection",
-        "entries": [ { "item": "bat_metal" } ]
-   },
-   {
-   "type": "item_group",
-   "id": "akari_identitys",
-   "subtype": "collection",
-   "entries": [
-   			{ "item": "chopsticks" },
-   			{ "item": "akari_1st_memo" }
-   		]
-   }
+    "entries": [ { "item": "bat_metal" } ]
+  },
+  {
+    "type": "item_group",
+    "id": "akari_identitys",
+    "subtype": "collection",
+    "entries": [ { "item": "chopsticks" }, { "item": "akari_1st_memo" } ]
+  }
 ]
