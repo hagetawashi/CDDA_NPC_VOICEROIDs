@@ -1,22 +1,22 @@
 [
   {
-    "id":"TALK_STRANGER_AKANE",
-    "type":"talk_topic",
+    "id": "TALK_STRANGER_AKANE",
+    "type": "talk_topic",
     "dynamic_line": "おお、人や！\n良かった～～！！\nうちの名前は琴葉茜や、一人で困ってたやんけど、君が良ければ一緒に行動してくれへんかな？",
-    "responses":[
-    	{ 
-    	"text": "いいだろう、こちらとしても助かる。",
-    	"topic": "TALK_DONE",
-    	"effect": [
-    		"follow",
-    		{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
-    		{ "u_add_var": "know_akane", "type": "flag", "context": "akane_is_friend", "value": "yes" },
-    		{ "arithmetic": [ { "npc_val": "age" }, "=", { "const": 17 } ] },
-    		{ "arithmetic": [ { "npc_val": "height" }, "=", { "const": 158 } ] },
-    		{ "arithmetic": [ { "npc_val": "stored_kcal" }, "=", { "const": 60000 } ] }
-    		],
-    	"opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 } },
-    	{ "text": "悪いが一人がいいんだ。", "topic": "TALK_DONE" }
-      ] 
-    }
+    "responses": [
+      {
+        "text": "いいだろう、こちらとしても助かる。",
+        "topic": "TALK_DONE",
+        "effect": [
+          "follow",
+          { "math": [ "n_counter_var_love_points_love_point", "+=", "3" ] },
+          { "u_add_var": "know_akane", "type": "flag", "context": "akane_is_friend", "value": "yes" },
+          { "math": [ "n_val('stored_kcal')", "=", "60000" ] },
+          { "npc_add_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" }
+        ],
+        "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+      },
+      { "text": "悪いが一人がいいんだ。", "topic": "TALK_DONE" }
+    ]
+  }
 ]

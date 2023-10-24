@@ -1,5 +1,5 @@
 [
-   {
+  {
     "type": "npc",
     "id": "AOI",
     "name_unique": "葵",
@@ -90,21 +90,22 @@
   {
     "type": "npc_class",
     "id": "aoi",
-    "name": "気は優しくてしっかり者（姉評）" ,
+    "name": "気は優しくてしっかり者（姉評）",
     "job_description": "お姉ちゃんから変なこと聞いたりしてませんか？\nうぅ、全部忘れてくださいね！",
-    "traits": [ { "trait": "VOIRO_BODY_AOI" },
-                 { "trait": "PRETTY" },
-                 { "trait": "STYLISH" },
-                 { "trait": "FASTLEARNER" },
-                 { "trait": "ADRENALINE" },
-                 { "trait": "LIAR" },
-                 { "trait": "PACKMULE" },
-                 { "trait": "BADCARDIO" },
-                 { "trait": "LIGHTWEIGHT" },
-                 { "trait": "TABLEMANNERS" },
-                 { "trait": "WEAKSTOMACH" }
-               ],
-    "bonus_str": { "rng": [-1, 0 ] },
+    "traits": [
+      { "trait": "VOIRO_BODY_AOI" },
+      { "trait": "PRETTY" },
+      { "trait": "STYLISH" },
+      { "trait": "FASTLEARNER" },
+      { "trait": "ADRENALINE" },
+      { "trait": "LIAR" },
+      { "trait": "PACKMULE" },
+      { "trait": "BADCARDIO" },
+      { "trait": "LIGHTWEIGHT" },
+      { "trait": "TABLEMANNERS" },
+      { "trait": "WEAKSTOMACH" }
+    ],
+    "bonus_str": { "rng": [ -1, 0 ] },
     "bonus_dex": { "rng": [ 0, 2 ] },
     "bonus_int": { "rng": [ -1, 1 ] },
     "bonus_per": { "rng": [ 0, 1 ] },
@@ -121,7 +122,7 @@
     "weapon_override": "aoi_wield",
     "common": false
   },
-    {
+  {
     "type": "item_group",
     "id": "aoi_worn",
     "subtype": "collection",
@@ -130,29 +131,29 @@
       { "item": "panties" },
       { "item": "voiro_socks_aoi" },
       { "item": "voiro_dress_aoi" },
-       { "item": "voiro_dress_sode_aoi" },
+      { "item": "voiro_dress_sode_aoi" },
       { "item": "voiro_boots_aoi" },
       { "item": "voiro_ornament_aoi" },
       { "item": "mbag" }
     ]
-   },
-   {
+  },
+  {
     "type": "item_group",
     "id": "aoi_carried",
     "subtype": "collection",
-    "entries": [ 
-        { "item": "bandages" },
-        { "item": "bandages" },
-        { "item": "bandages" },
-        { "item": "adhesive_bandages" },
-        { "item": "adhesive_bandages" },
-        { "item": "adhesive_bandages" }
-               ]
-   },
-   {
+    "entries": [
+      { "item": "bandages" },
+      { "item": "bandages" },
+      { "item": "bandages" },
+      { "item": "adhesive_bandages" },
+      { "item": "adhesive_bandages" },
+      { "item": "adhesive_bandages" }
+    ]
+  },
+  {
     "type": "item_group",
     "id": "aoi_wield",
     "subtype": "collection",
-        "entries": [ { "item": "spear_wood_simple" } ]
-   }
+    "entries": [ { "item": "spear_wood_simple" } ]
+  }
 ]

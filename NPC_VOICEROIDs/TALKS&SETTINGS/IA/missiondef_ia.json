@@ -20,13 +20,13 @@
       "success": "ありがとう！　よーし、これならONEちゃんをなんとか探しに行けるかも！",
       "success_lie": "本当ですか？　でもまだ窓の外にいっぱいいるんだけど……。",
       "failure": "どうかした？"
-      }
-    },
+    }
+  },
   {
     "id": "MISSION_REACH_FEMA_CAMP_IA",
     "type": "mission_definition",
     "name": { "str": "FEMAキャンプに連れて行ってください。" },
-     "goal": "MGOAL_GO_TO_TYPE",
+    "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 5,
     "value": 60000,
     "start": { "effect": "follow_only" },
