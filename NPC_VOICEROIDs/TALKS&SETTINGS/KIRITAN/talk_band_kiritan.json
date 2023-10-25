@@ -1,0 +1,589 @@
+[
+  {
+    "id": [ "TALK_INTERCTION_KIRITAN" ],
+    "type": "talk_topic",
+    "dynamic_line": {
+    	"concatenate": [
+    		{ "npc_has_trait": "band_lv0",
+    			"yes": [ "……はい？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "（無言でこちらを見つめている）\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "お話ですか？\nはいはい、わかりましたよ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    			"no": {
+    				"npc_has_trait": "band_lv1",
+    				"yes": [ "なんでしょう？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "会話ならセーブするまで待ってくださいね。\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "あー！話しかけるから死んじゃったじゃないですかぁー！\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    				"no": {
+    					"npc_has_trait": "band_lv2",
+    					"yes": [ "ん…<u_name>さん、どうしました？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "そろそろだと思って、セーブはばっちりです！\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "わたしとお話したいんですね？\nしょうがないですねぇ、にやにや\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    					"no": {
+    						"npc_has_trait": "band_lv3",
+    						"yes": [ "<u_name>さん、ほらほらボドゲの準備はばっちりですよ！\n一緒に遊びましょう！\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "おや<u_name>さん、休憩タイムですか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "おっと、セーブセーブ…っと\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    						"no": {
+    							"npc_has_trait": "band_lv4",
+    							"yes": [ "<u_name>さん<u_name>さん。\nへへっ、呼んだだけでーす♪\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "今日は何して遊びます？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>", "<u_name>さんと過ごすようになってから一人でゲームしてるとちょっと寂しいんです。\n現在好感度:<npc_val:counter_var_adjust_band_band_count>" ],
+    							"no": [ "<u_name>さん、どうしました？\nへへっ、わたしに見惚れても笑顔しか出てきませんよ？", "ねえねえ、何かお話しませんか？\nわたしちょっと退屈なんです！", "<u_name>さん、何かして遊びませんか？\nだってわたしと遊びたそうな顔してますよ？" ]
+    								}
+    							}
+    						}
+    					}
+    				}
+    			]
+    	},
+    "responses": [
+    	{
+    	"//": "ランダムNPC用選択肢群",
+    	"text": "ゆったりと会話する",
+    	"topic": "TALK_NO_ITEM_KIRITAN"
+    	},
+    	{
+    	"//": "全部作ると飲食は差分が膨大になるので次の選択肢でアイテムを限定する",
+    	"text": "食べながら会話する",
+    	"topic": "TALK_EAT_ITEM_KIRITAN"
+    	},
+    	{
+    	"text": "弁当を作ってもらう",
+    	"topic": "TALK_MAKING_BENTO",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_has_any_trait": [ "band_lv4", "band_lv5" ] },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 50 }
+    			]
+    		}
+    	},
+    	{
+    	"text": "銃弾を作ってもらう",
+    	"topic": "TALK_MAKING_BULLET",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+    			{ "npc_has_any_trait": [ "band_lv1", "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] }
+    		]
+    	    }
+    	},
+    	{
+    	"text": "ユニーク品を作ってもらう",
+    	"topic": "TALK_MAKING_Y_ITEMS",
+    	"condition": { "and": [
+    			{ "not": { "u_has_effect": "band_collecting" } },
+    			{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+    			{ "npc_has_any_trait": [ "band_lv1", "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] }
+    		]
+    	    }
+    	},
+    	{
+        "text": "絆を深める（LV1）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 10 },
+        		{ "npc_has_trait" : "band_lv0" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv0" }, { "npc_add_trait": "band_lv1" }, { "u_message": "<npc_name>との絆が深まりました！\n二人はもはや友人と呼べるでしょう！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（LV2）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 20 },
+        		{ "npc_has_trait" : "band_lv1" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv1" }, { "npc_add_trait": "band_lv2" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>は背中を預けるに足る相手だと感じます！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（LV3）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 30 },
+        		{ "npc_has_trait" : "band_lv2" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv2" }, { "npc_add_trait": "band_lv3" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世界で最も得難い宝と言えます！", "popup": true} ]
+       },
+       {
+        "text": "絆を深める（EX）",
+        "topic": "TALK_DONE",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 50 },
+        		{ "npc_has_trait" : "band_lv3" }
+        	]
+        },
+                 "effect": [ { "npc_lose_trait": "band_lv3" }, { "npc_add_trait": "band_lv4" }, { "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世で最も特別な存在になりました！", "popup": true} ]
+      },
+      {
+        "text": "絆を深める（EX+）",
+        "topic": "TALK_CHAIN_EXP",
+        "condition": { "and": [
+        		{ "npc_compare_var": "band_count","type": "counter","context": "var_adjust_band","op": ">=","value": 150 },
+        		{ "npc_has_trait" : "band_lv4" },
+        		{ "or": [ { "u_has_item": "ring_wedding", "count": 1 }, { "u_has_item": "ring_wedding_silver", "count": 1 } ] }
+        	]
+        }
+      },
+      {
+    	"text": "戻る",
+    	"topic": "TALK_NONE"
+   },
+    	{
+    	"text": "交流を終える",
+    	"topic": "TALK_DONE"
+    	}
+    ]
+   },
+   {
+     "id": [ "TALK_NO_ITEM_KIRITAN" ],
+     "type": "talk_topic",
+     "dynamic_line": {
+    	"concatenate": [
+    		{ "npc_has_trait": "band_lv0",
+    			"yes": [ "食べ物は、下に行くほど好物なんです。\n何の話かって？…秘密です。", "（無言の時間が続いた…）", "えっと…あの…\nうぅ…" ],
+    			"no": {
+    				"npc_has_trait": "band_lv1",
+    				"yes": [ "<u_name>さんの好きなゲームってなんですか？\n何か一つくらいあるでしょう？", "（無言の時間が続いた…が、前より近くに座っている）", "はぁ、新作ゲームで遊べないのが辛いです…", "好きなもの？\nそりゃあもちろんずん姉さまです！！\n……あ、食べ物？それならやっぱりずん姉さまに関係するあれですね、あれ" ],
+    				"no": {
+    					"npc_has_trait": "band_lv2",
+    					"yes": [ "<u_name>さんと遊ぶの楽しいですよ。\nもっと平和な頃に出会えていれば…", "聞いてくださいよ、この間、わたしの好きなゲームの初代が置いてあるのを見つけて…", "（無言の時間が続いた…が、手を伸ばせば届く距離まで近づいてきている）" ],
+    					"no": {
+    						"npc_has_trait": "band_lv3",
+    						"yes": [ "一緒に行動してるのが<u_name>さんじゃなかったらと思うと怖くなります。\nなんでって…そりゃあわたし美少女ですから！", "新作ゲームが遊べない分、<u_name>さんが遊んでくれて助かります", "（すぐ隣に座った<npc_name>と無言の時間を過ごした…）" ],
+    						"no": {
+    							"npc_has_trait": "band_lv4",
+    							"yes": [ "<u_name>さん、後5年経ったら聞いてもらいたいことがあるんです", "ずん姉さまとイタコ姉さまに<u_name>さんのことなんて紹介しましょうか…\n下手なこと言ったらずんだ餅にされちゃいそう", "（無言で膝の上に座る<npc_name>の体温が伝わってくる…）\n………へへっ♪" ],
+    							"no": [ "<u_name>さん、大好きです…。\nもう5年も待てないくらい、あなたが好きなんです…", "<u_name>さんが小学五年生相手にガチ告白したこと、一生ネタにしますからね♪\nへへっ、一生忘れません、ずっと…ずっと…", "(無言で頬を摺り寄せてくる…。<u_name>の体温を感じながらのんびりと過ごした…)" ]
+    							}
+    						}
+    					}
+    				}
+    		}
+    	]
+    	},
+    "responses": [
+    	{
+    		"text": "<band_talk_answer>",
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_GENERIC_EOC", "duration": "10 minutes" },
+			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": [ 1, 3 ] },
+    			{ "u_message": "腰を下ろしてゆっくりと会話しました。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "fear": -1, "anger": -1 }
+    	 }
+    	]
+   },
+   {
+     "id": [ "TALK_EAT_ITEM_KIRITAN" ],
+     "type": "talk_topic",
+     "dynamic_line": "お、おやつの時間ですか？",
+     "responses": [
+    	{
+    		"text": "フライドポテト",
+    		"condition": { "u_has_item": "fresh_fries", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "fresh_fries", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 1 },
+    			{ "u_message": "フライドポテトを食べながら談笑しました…。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+    	 },
+    	{
+    		"text": "NYホットドッグ",
+    		"condition": { "u_has_item": "hotdogs_newyork", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "hotdogs_newyork", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 1 },
+    			{ "u_message": "NYホットドッグを食べながら談笑しました…。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+    	 },
+    	{
+    		"text": "ウシキャンディ",
+    		"condition": { "u_has_item": "cow_candy", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "cow_candy", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 1 },
+    			{ "u_message": "ウシキャンディを舐めながら談笑しました…。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+    	 },
+    	{
+    		"text": "エッグクッキー",
+    		"condition": { "u_has_item": "cookies_egg", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "cookies_egg", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 1 },
+    			{ "u_message": "エッグクッキーを食べながら談笑しました…。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+    	 },
+    	{
+    		"text": "チョコバー",
+    		"condition": { "u_has_item": "chocolate", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "chocolate", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 1 },
+    			{ "u_message": "チョコバーを食べながら談笑しました…。\n好感度が少し上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 }
+    	 },
+    	 {
+    		"text": "アイシングクリーム",
+    		"condition": { "u_has_item": "buttercream", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "buttercream", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 2 },
+    			{ "u_message": "アイシングクリームを食べながら談笑しました…。\n好感度が上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 },
+    	 {
+    		"text": "チョコパンケーキ",
+    		"condition": { "u_has_item": "choc_pancakes", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "choc_pancakes", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 2 },
+    			{ "u_message": "チョコパンケーキを食べながら談笑しました…。\n好感度が上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 },
+    	 {
+    		"text": "ゼリー",
+    		"condition": { "u_has_item": "gelatin_dessert_processed", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "gelatin_dessert_processed", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 2 },
+    			{ "u_message": "ゼリーを食べながら談笑しました…。\n好感度が上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 },
+    	 {
+    		"text": "ナチョス(チーズ)",
+    		"condition": { "u_has_item": "nachosc", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "nachosc", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 2 },
+    			{ "u_message": "ナチョス(チーズ)を食べながら談笑しました…。\n好感度が上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 },
+    	 {
+    		"text": "パウダーキャンディスティック",
+    		"condition": { "u_has_item": "powder_candy", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "powder_candy", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 2 },
+    			{ "u_message": "パウダーキャンディスティックを舐めながら談笑しました…。\n好感度が上がりました。", "popup": true }
+    			 ],
+				 "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2 }
+    	 },
+    	 {
+    		"text": "トルティーヤチップス",
+    		"condition": { "u_has_item": "nachos", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "nachos", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "トルティーヤチップスを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "トルティーヤチップス",
+    		"condition": { "u_has_item": "nachos", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "nachos", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "トルティーヤチップスを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "チョコプレッツェル",
+    		"condition": { "u_has_item": "chocpretzels", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "chocpretzels", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "チョコプレッツェルを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "プレッツェル",
+    		"condition": { "u_has_item": "pretzels", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "pretzels", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "プレッツェルを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "フルーツゼリー",
+    		"condition": { "u_has_item": "gelatin_dessert_fruit", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "gelatin_dessert_fruit", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "フルーツゼリーを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "モルトミルクボール",
+    		"condition": { "u_has_item": "maltballs", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "maltballs", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 3 },
+    			{ "u_message": "モルトミルクボールを食べながら談笑しました…。\n好感度が多めに上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "ポップコーン(塩)",
+    		"condition": { "u_has_item": "popcorn2", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "popcorn2", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 4 },
+    			{ "u_message": "ポップコーン(塩)を食べながら談笑しました…。\n好感度がとても上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "ポップコーン(バター)",
+    		"condition": { "u_has_item": "popcorn3", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "popcorn3", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 4 },
+    			{ "u_message": "ポップコーン(バター)を食べながら談笑しました…。\n好感度がとても上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "チョコワッフル",
+    		"condition": { "u_has_item": "choc_waffles", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "choc_waffles", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 4 },
+    			{ "u_message": "チョコワッフルを食べながら談笑しました…。\n好感度がとても上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "飴(チョコ)",
+    		"condition": { "u_has_item": "candy2", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "candy2", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 4 },
+    			{ "u_message": "チョコ飴を舐めながら談笑しました…。\n好感度がとても上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "巨大グラハムクラッカー",
+    		"condition": { "u_has_item": "grahmcrackers_roe", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "grahmcrackers_roe", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 4 },
+    			{ "u_message": "とっても大きなグラハムクラッカーを食べながら談笑しました…。\n好感度がとても上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "リンゴ飴",
+    		"condition": { "u_has_item": "caramel_apple", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "caramel_apple", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 5 },
+    			{ "u_message": "リンゴ飴を食べながら談笑しました…。\n好感度が大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "飴(爬虫類型)",
+    		"condition": { "u_has_item": "candy3gator", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "candy3gator", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 5 },
+    			{ "u_message": "爬虫類の形の飴を舐めながら談笑しました…。食べるのがちょっともったいない！\n好感度が大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "マシュマロ",
+    		"condition": { "u_has_item": "marshmallow", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "marshmallow", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 5 },
+    			{ "u_message": "マシュマロを食べながら談笑しました…。\n好感度が大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "フェアリーブレッド",
+    		"condition": { "u_has_item": "sandwich_fairy", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "sandwich_fairy", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 5 },
+    			{ "u_message": "フェアリーブレッドを食べながら談笑しました…。\n好感度が大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "スモア",
+    		"condition": { "u_has_item": "smores", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "smores", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 5 },
+    			{ "u_message": "スモアを食べながら談笑しました…。\n好感度が大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 3, "value": 3, "fear": -3, "anger": -3 }
+    	 },
+    	 {
+    		"text": "ずんだ餅",
+    		"condition": { "u_has_item": "voiro_zundamochi", "count": 1 },
+    		"topic": "TALK_DONE",
+    		"effect": [ 
+    			{ "u_consume_item": "voiro_zundamochi", "count": 1  },
+    			{ "u_add_effect": "band_talk_end", "duration": "1 hours" },
+    			{ "npc_add_effect": "band_talk_end", "duration": "8 hours" },
+    			{ "u_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_assign_activity": "ACT_TALK_BAND1_EOC", "duration": "10 minutes" },
+    			{ "npc_adjust_var": "band_count", "type": "counter", "context": "var_adjust_band", "adjustment": 15 },
+    			{ "u_message": "ずんだ餅を食べながら談笑しました…。\n<npc_name>は大満足です！\n好感度が超大幅に上がりました！", "popup": true }
+    			 ],
+				 "opinion": { "trust": 5, "value": 5, "fear": -5, "anger": -5 }
+    	 },
+    	 {
+    	 	"text": "戻る",
+    	 	"topic": "TALK_NONE"
+    	 }
+    	]
+   }
+]

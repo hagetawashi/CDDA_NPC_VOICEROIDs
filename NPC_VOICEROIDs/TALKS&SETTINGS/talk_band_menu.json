@@ -1,0 +1,167 @@
+[
+  {
+    "id": [ "TALK_ALLY_SOCIAL", "TALK_BAND_MENU" ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_IA",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait":  [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_IA" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_KIRITAN",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_KIRITAN" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_AKARI",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_AKARI" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_YUKARI",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_YUKARI" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_AKANE",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_AKANE" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_AOI",
+        	"condition": { "and": [
+        			{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4",
+        				"band_lv5"
+        			]
+        		},
+        		{ "npc_has_trait": "VOIRO_BODY_AOI" },
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" } ] }
+        		}
+        		]
+        	}
+      },
+      {
+        "text": "交流する",
+        "topic": "TALK_INTERCTION_GENERIC",
+        	"condition": { "and": [
+        		{ "npc_has_any_trait": [ 
+        				"band_lv0",
+        				"band_lv1",
+        				"band_lv2",
+        				"band_lv3",
+        				"band_lv4"
+        			]
+        		},
+        		{ "not": { "or": [ { "u_has_effect": "band_talk_end" },
+        					{ "npc_has_effect": "band_talk_end" },
+        					{ "npc_has_trait": "VOIRO_BODY_IA" },
+        					{ "npc_has_trait": "VOIRO_BODY_KIRITAN" },
+        					{ "npc_has_trait": "VOIRO_BODY_AKARI" },
+							{ "npc_has_trait": "VOIRO_BODY_AKANE" },
+							{ "npc_has_trait": "VOIRO_BODY_AOI" },
+        					{ "npc_has_trait": "VOIRO_BODY_YUKARI" }
+        					 ] } }
+        		]
+        	}
+      },
+      {
+        "text": "絆を結ぶ",
+        "topic": "TALK_DONE",
+        	"condition": {
+        	"not":  { "or": [ 
+        				{ "npc_has_trait": "band_lv0" },
+        				{ "npc_has_trait": "band_lv1" },
+        				{ "npc_has_trait": "band_lv2" },
+        				{ "npc_has_trait": "band_lv3" },
+        				{ "npc_has_trait": "band_lv4" },
+        				{ "npc_has_trait": "band_lv5" }
+        				 ] }
+        },
+        "effect": [  { "npc_add_trait": "band_lv0" }, { "u_message": "<npc_name>と絆を結びました。\nまずは顔見知りから始めましょう！", "popup": true } ]
+      }
+     ]
+    }
+]
