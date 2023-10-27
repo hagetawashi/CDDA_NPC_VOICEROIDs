@@ -132,6 +132,28 @@
     }
   },
   {
+    "id": "tumugi_nikki",
+    "type": "TOOL",
+    "category": "books",
+    "name": "手書きの埼玉観光ガイド",
+    "looks_like": "leather_journal",
+    "description": "日本のサイタマ県についてコピックで書かれた色とりどりの少女らしい丸っこい文字がびっしりと書き込まれた手書きの観光ガイドのようです。自分で撮影したと思われる観光地の写真と共におすすめポイントが丁寧に説明されています。",
+    "volume": "300 ml",
+    "weight": "150 g",
+    "price": 600000,
+    "material": [ "paper", "leather" ],
+    "symbol": ";",
+    "color": "green",
+    "flags": [ "SINGLE_USE" ],
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "TUMUGI",
+      "summon_msg": "観光ガイドを読んでみました。なんだかとっても埼玉に行ってみたい気分です！",
+      "place_randomly": true,
+      "moves": 50
+    }
+  },
+  {
     "type": "GENERIC",
     "id": "akari_1st_memo",
     "category": "books",
