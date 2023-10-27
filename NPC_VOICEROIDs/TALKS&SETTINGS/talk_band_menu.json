@@ -71,6 +71,17 @@
       },
       {
         "text": "交流する",
+        "topic": "TALK_INTERCTION_TUMUGI",
+        "condition": {
+          "and": [
+            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
+            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "npc_has_trait": "VOIRO_BODY_TUMUGI" }
+          ]
+        }
+      },
+      {
+        "text": "交流する",
         "topic": "TALK_INTERCTION_GENERIC",
         "condition": {
           "and": [

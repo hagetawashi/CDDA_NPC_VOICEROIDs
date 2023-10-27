@@ -98,7 +98,7 @@
       { "trait": "OPTIMISTIC" },
       { "trait": "INATTENTIVE" },
       { "trait": "QUICK" },
-      { "trait": "LIHGTEATER" },
+      { "trait": "LIGHTEATER" },
       { "trait": "PACKMULE" },
       { "trait": "STYLISH" },
       { "trait": "WEAKSTOMACH" },
@@ -129,7 +129,7 @@
     "subtype": "collection",
     "entries": [
       { "item": "panties" },
-      { "item": "bura" },
+      { "item": "bra" },
       { "item": "tabi_gi" },
       { "item": "voiro_cardigan_tumugi" },
       { "item": "voiro_shirt_tumugi" },

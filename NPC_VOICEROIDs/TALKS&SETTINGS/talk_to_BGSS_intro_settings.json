@@ -41,6 +41,12 @@
         "topic": "TALK_STORY1_AOI",
         "condition": { "npc_has_trait": "VOIRO_BODY_AOI" },
         "switch": true
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_STORY1_TUMUGI",
+        "condition": { "npc_has_trait": "VOIRO_BODY_TUMUGI" },
+        "switch": true
       }
     ]
   }
