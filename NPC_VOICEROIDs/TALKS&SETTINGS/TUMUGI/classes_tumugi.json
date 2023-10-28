@@ -130,7 +130,6 @@
     "entries": [
       { "item": "panties" },
       { "item": "bra" },
-      { "item": "tabi_gi" },
       { "item": "voiro_cardigan_tumugi" },
       { "item": "voiro_shirt_tumugi" },
       { "item": "voiro_skirt_tumugi" },
@@ -145,7 +144,8 @@
     "id": "kasukabe_carried",
     "subtype": "collection",
     "entries": [
-      { "item": "voiro_poipon8", "ammo-item": "battery", "charges": 120 }
+      { "item": "voiro_poipon8", "ammo-item": "battery", "charges": 120 },
+      { "item": "wallet_stylish", "contents-group": "kasukabe_saihu" }
     ]
   },
   {
@@ -153,5 +153,16 @@
     "id": "kasukabe_wield",
     "subtype": "collection",
     "entries": [ { "item": "staff_pipe" } ]
+  },
+  {
+    "type": "item_group",
+    "id": "kasukabe_saihu",
+    "subtype": "collection",
+    "entries": [
+      { "item": "coin_dollar", "count": 10 },
+      { "item": "money_five", "count": 5 },
+      { "item": "money_ten", "count": 3 },
+      { "item": "condom", "count": 1 }
+    ]
   }
 ]
