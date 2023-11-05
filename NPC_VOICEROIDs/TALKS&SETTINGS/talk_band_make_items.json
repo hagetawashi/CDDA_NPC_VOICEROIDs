@@ -22,7 +22,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "お弁当ですね？\nよっしゃ！うちが愛情いっぱいの弁当作ったるさかい、任せときー！\n……こほんこほん、私に任せてください！",
-                    "no": "よし、弁当だな？\nほら、今日の分だ…次は明日な"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "おべんとう～？\nあーしの手料理が食べたいなんて贅沢さんめっ！\nはい、どうぞダーリン♪\n……な、なんちゃって",
+                      "no": "よし、弁当だな？\nほら、今日の分だ…次は明日な"
+                    }
                   }
                 }
               }
@@ -70,7 +74,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "銃弾を作るんですね、こう見えて手先は器用な方ですよ！",
-                    "no": "銃弾を作るのか？\nもちろんいいとも"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "銃弾か～…ほんっと～に、あーしに任せていいんだね？",
+                      "no": "銃弾を作るのか？\nもちろんいいとも"
+                    }
                   }
                 }
               }
@@ -115,7 +123,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "9mm弾ですね。\nどれにしましょうか",
-                    "no": "9mm弾だな？\n種類はどうする？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "9mm弾だね。\nいくつか種類があるけどどれにしよっか？",
+                      "no": "9mm弾だな？\n種類はどうする？"
+                    }
                   }
                 }
               }
@@ -155,7 +167,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "JHP弾ですね？\n数はどうしましょうか",
-                    "no": "JHP弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "JHP弾！\nオッケー、いくつ作る？",
+                      "no": "JHP弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -221,7 +237,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "FMJ弾ですね？\n数はどうしましょうか",
-                    "no": "FMJ弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "FMJ弾！オッケー、いくつ作る？",
+                      "no": "FMJ弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -287,7 +307,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "+P弾ですね？\n数はどうしましょうか",
-                    "no": "+P弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "+P弾！オッケー、いくつ作る？",
+                      "no": "+P弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -353,7 +377,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "+P+弾ですね？\n数はどうしましょうか",
-                    "no": "+P+弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "+P+弾！オッケー、いくつ作る？",
+                      "no": "+P+弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -419,7 +447,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "5.56mm/NATO弾ですね。\nどれにしましょうか",
-                    "no": "5.56mm/NATO弾だな？\n種類はどうする？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "5.56mm/NATO弾だね。\nいくつか種類があるけどどれにしよっか？",
+                      "no": "5.56mm/NATO弾だな？\n種類はどうする？"
+                    }
                   }
                 }
               }
@@ -441,23 +473,27 @@
       "concatenate": [
         {
           "npc_has_trait": "VOIRO_BODY_YUKARI",
-          "yes": "通常のNATO弾ですね？\nいくつ作りますか？",
+          "yes": "手詰NATO弾ですね？\nいくつ作りますか？",
           "no": {
             "npc_has_trait": "VOIRO_BODY_AKARI",
-            "yes": "通常のNATO弾ですね。\nどのくらい必要ですか？",
+            "yes": "手詰NATO弾ですね。\nどのくらい必要ですか？",
             "no": {
               "npc_has_trait": "VOIRO_BODY_IA",
-              "yes": "通常のNATO弾だね。\nいくつ必要かな？",
+              "yes": "手詰NATO弾だね。\nいくつ必要かな？",
               "no": {
                 "npc_has_trait": "VOIRO_BODY_KIRITAN",
-                "yes": "通常のNATO弾ですね。\nなるべく少なめにお願いしまーす",
+                "yes": "手詰NATO弾ですね。\nなるべく少なめにお願いしまーす",
                 "no": {
                   "npc_has_trait": "VOIRO_BODY_AKANE",
-                  "yes": "通常のNATO弾やな？\nよっしゃ、いくつ作ろか？",
+                  "yes": "手詰NATO弾やな？\nよっしゃ、いくつ作ろか？",
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
-                    "yes": "通常のNATO弾ですね？\n数はどうしましょうか",
-                    "no": "通常のNATO弾だな、いくつ作ればいい？"
+                    "yes": "手詰NATO弾ですね？\n数はどうしましょうか",
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "手詰NATO弾！オッケー、いくつ作る？",
+                      "no": "手詰NATO弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -523,7 +559,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "曳光弾ですね？\n数はどうしましょうか",
-                    "no": "曳光弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "曳光弾！オッケー、いくつ作る？",
+                      "no": "曳光弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -573,23 +613,27 @@
       "concatenate": [
         {
           "npc_has_trait": "VOIRO_BODY_YUKARI",
-          "yes": ".50口径BMG弾ですね？\n種類はどうしましょうか",
+          "yes": ".50口径弾ですね？\n種類はどうしましょうか",
           "no": {
             "npc_has_trait": "VOIRO_BODY_AKARI",
-            "yes": ".50口径BMG弾ですね。\n種類はどれがいいですか？",
+            "yes": ".50口径弾ですね。\n種類はどれがいいですか？",
             "no": {
               "npc_has_trait": "VOIRO_BODY_IA",
-              "yes": ".50口径BMG弾ですか。\nどれにする？",
+              "yes": ".50口径弾ですか。\nどれにする？",
               "no": {
                 "npc_has_trait": "VOIRO_BODY_KIRITAN",
-                "yes": ".50口径BMG弾ですか…。\nどれがいいですか",
+                "yes": ".50口径弾ですか…。\nどれがいいですか",
                 "no": {
                   "npc_has_trait": "VOIRO_BODY_AKANE",
-                  "yes": ".50口径BMG弾やな？\n種類はどないする？",
+                  "yes": ".50口径弾やな？\n種類はどないする？",
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
-                    "yes": ".50口径BMG弾ですね。\nどれにしましょうか",
-                    "no": ".50口径BMG弾だな？\n種類はどうする？"
+                    "yes": ".50口径弾ですね。\nどれにしましょうか",
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": ".50口径弾だね。\nいくつか種類があるけどどれにしよっか？",
+                      "no": ".50口径弾だな？\n種類はどうする？"
+                    }
                   }
                 }
               }
@@ -629,7 +673,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "競技用弾ですね？\n数はどうしましょうか",
-                    "no": "競技用弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "競技用弾！オッケー、いくつ作る？",
+                      "no": "競技用弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -695,7 +743,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "AP弾ですね？\n数はどうしましょうか",
-                    "no": "AP弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "AP弾！オッケー、いくつ作る？",
+                      "no": "AP弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -761,7 +813,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "曳光弾ですね？\n数はどうしましょうか",
-                    "no": "曳光弾だな、いくつ作ればいい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "曳光弾！オッケー、いくつ作る？",
+                      "no": "曳光弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -827,7 +883,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "ラウフォス弾ですね？\n数はいくつ欲しいですか",
-                    "no": "ラウフォス弾だな、いくら欲しい？"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "ラウフォス弾！オッケー、いくつ作る？",
+                      "no": "ラウフォス弾だな、いくつ作ればいい？"
+                    }
                   }
                 }
               }
@@ -893,7 +953,11 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "特別なアイテム……。\nわかりました、やってみましょう",
-                    "no": "ユニーク品か、難しいだろうがやってみよう"
+                    "no": {
+                      "npc_has_trait": "VOIRO_BODY_TUMUGI",
+                      "yes": "ユニークアイテム…それは、魔性の響き…なんつって！",
+                      "no": "ユニーク品か、難しいだろうがやってみよう"
+                    }
                   }
                 }
               }
