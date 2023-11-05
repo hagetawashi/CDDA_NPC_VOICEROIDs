@@ -188,7 +188,7 @@
                   "no": {
                     "npc_has_trait": "VOIRO_BODY_AOI",
                     "yes": "これうちのめっちゃ好きなやつ！\n…あっ、こほんこほん…<topic_item>、大好きなんです。\nその、えっと…わ、忘れてください…",
-                    no": {
+                    "no": {
                       "npc_has_trait": "VOIRO_BODY_TUMUGI",
                       "yes": "あーしにこれくれるの…！？\nや、ヤバい嬉しい…ありがとう<u_name>！",
                       "no": "ああ、これ大好物なんだ！ありがとう！"
