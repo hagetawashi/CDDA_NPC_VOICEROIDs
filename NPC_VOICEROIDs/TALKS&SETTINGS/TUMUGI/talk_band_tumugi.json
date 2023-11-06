@@ -7,42 +7,42 @@
         {
           "npc_has_trait": "band_lv0",
           "yes": [
-            "……はい？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-            "（無言でこちらを見つめている）\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-            "お話ですか？\nはいはい、わかりましたよ\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+            "うん？あーしになんか用？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+            "おお？どうかした？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+            "<u_name>、どうかした？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
           ],
           "no": {
             "npc_has_trait": "band_lv1",
             "yes": [
-              "なんでしょう？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-              "会話ならセーブするまで待ってくださいね。\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-              "あー！話しかけるから死んじゃったじゃないですかぁー！\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+              "ちょっと疲れたねー、休憩する？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+              "おつかれー、息抜きも大事だよ！\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+              "ねえねえ<u_name>、あーしとちょっと話でもしない？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
             ],
             "no": {
               "npc_has_trait": "band_lv2",
               "yes": [
-                "ん…<u_name>さん、どうしました？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                "そろそろだと思って、セーブはばっちりです！\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                "わたしとお話したいんですね？\nしょうがないですねぇ、にやにや\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+                "やっほー、元気？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                "<u_name>、ちょっと疲れてない？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                "あーし、ちょっと疲れたなー休憩したいなー\n現在好感度:<npc_val:counter_var_love_points_love_point>"
               ],
               "no": {
                 "npc_has_trait": "band_lv3",
                 "yes": [
-                  "<u_name>さん、ほらほらボドゲの準備はばっちりですよ！\n一緒に遊びましょう！\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                  "おや<u_name>さん、休憩タイムですか？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                  "おっと、セーブセーブ…っと\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+                  "ねーねー、ちょっと退屈ー。\nあーしとお話しようよ！\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "なんかキミちょっと疲れてない？\n少し休まない？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "あーしのことじっと見てどしたの？\nははーん、さてはあーしのこと好きになったなー？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
                 ],
                 "no": {
                   "npc_has_trait": "band_lv4",
                   "yes": [
-                    "<u_name>さん<u_name>さん。\nへへっ、呼んだだけでーす♪\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                    "今日は何して遊びます？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                    "<u_name>さんと過ごすようになってから一人でゲームしてるとちょっと寂しいんです。\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+                    "ねーねー<u_name>～、暇だよ構って構って～\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                    "ちょっと時間あるなら休憩しない？\nキミ、すぐ無理するからあーしちょっと心配\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                    "きんきゅーじたい！あーし退屈警報発令中！繰り返す、あーし退屈警報発令中～！\n至急、<u_name>はあーしを構われたし！\n現在好感度:<npc_val:counter_var_love_points_love_point>"
                   ],
                   "no": [
-                    "<u_name>さん、どうしました？\nへへっ、わたしに見惚れても笑顔しか出てきませんよ？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                    "ねえねえ、何かお話しませんか？\nわたしちょっと退屈なんです！\n現在好感度:<npc_val:counter_var_love_points_love_point>",
-                    "<u_name>さん、何かして遊びませんか？\nだってわたしと遊びたそうな顔してますよ？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
+                    "ちょっと疲れたねー。ね、休憩…する？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                    "じぃー…。んー、何見てるのかって？\nへへー、あのね…あーしが一番好きな物見てんの\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                    "ねー、<u_name>ってば～。あーし退屈だぞ～、寂しくて死んじゃうぞ～！\nかーまーえーよー！\n現在好感度:<npc_val:counter_var_love_points_love_point>"
                   ]
                 }
               }
@@ -107,43 +107,42 @@
         {
           "npc_has_trait": "band_lv0",
           "yes": [
-            "食べ物は、下に行くほど好物なんです。\n何の話かって？…秘密です。",
-            "（無言の時間が続いた…）",
-            "えっと…あの…\nうぅ…"
+            "これからどうするかちゃんと考えてる？\nあーしは…うーん、そういうの得意じゃないから任せるね！",
+            "あーし、よく距離が近いって言われるんだよねー…そんなつもりはないんだけど。\nキミも、もしあーしが近すぎたりしたら言ってね？",
+            "あーしは美味しいものしか食べないよ。ぜっっったいにね！"
           ],
           "no": {
             "npc_has_trait": "band_lv1",
             "yes": [
-              "<u_name>さんの好きなゲームってなんですか？\n何か一つくらいあるでしょう？",
-              "（無言の時間が続いた…が、前より近くに座っている）",
-              "はぁ、新作ゲームで遊べないのが辛いです…",
-              "好きなもの？\nそりゃあもちろんずん姉さまです！！\n……あ、食べ物？それならやっぱりずん姉さまに関係するあれですね、あれ"
+              "ハンバーガーとかコーラとか…そういうちょっとジャンキーな食べ物って時々食べたくなるよね",
+              "へっ？こ、恋人？いやぁ、そんなの居たこと無いよ。\nそういう経験は全然…ほんと…",
+              "あーし、結構軽い女って見られがちなんだよねぇ…なんでかわかる？"
             ],
             "no": {
               "npc_has_trait": "band_lv2",
               "yes": [
-                "<u_name>さんと遊ぶの楽しいですよ。\nもっと平和な頃に出会えていれば…",
-                "聞いてくださいよ、この間、わたしの好きなゲームの初代が置いてあるのを見つけて…",
-                "（無言の時間が続いた…が、手を伸ばせば届く距離まで近づいてきている）"
+                "偏食ぅ？\n失礼なび・しょ・く・かって言ってもらえる？\nあーしは美食家なのー！",
+                "ね、ね。<u_name>は埼玉に来たことある？ない？\nいつか絶対行ってみてね！アニメの舞台になった観光地なんかもあるよ！",
+                "あーしはカレーが好き。\nカレーは飲み物、カレーは食べ物。そしてカレーは人生…なんつって"
               ],
               "no": {
                 "npc_has_trait": "band_lv3",
                 "yes": [
-                  "一緒に行動してるのが<u_name>さんじゃなかったらと思うと怖くなります。\nなんでって…そりゃあわたし美少女ですから！",
-                  "新作ゲームが遊べない分、<u_name>さんが遊んでくれて助かります",
-                  "（すぐ隣に座った<npc_name>と無言の時間を過ごした…）"
+                  "キミ、あーしのことあんまり変な目で見ないよねー。\nギャルっぽいってだけで寄ってくる男とか嫌そうに見る女の子って多いからちょっと嬉しいな",
+                  "ね、ね。\nカレーとあーし、どっちが好き？\n……えっ？カレー！？\nそんな…そんなのって……！\n\n\nわかる！！！",
+                  "あーし時々怖くなるんだ…。\n何が、って…そりゃあこれからのこと、とか…かな？\nあれ、何がそんなに怖いんだっけ"
                 ],
                 "no": {
                   "npc_has_trait": "band_lv4",
                   "yes": [
-                    "<u_name>さん、後5年経ったら聞いてもらいたいことがあるんです",
-                    "ずん姉さまとイタコ姉さまに<u_name>さんのことなんて紹介しましょうか…\n下手なこと言ったらずんだ餅にされちゃいそう",
-                    "（無言で膝の上に座る<npc_name>の体温が伝わってくる…）\n………へへっ♪"
+                    "<u_name>はなんであーしと一緒に居てくれるの？あ、いや、なんとなーく気になっただけだよ。\n…好きだから？\nんふふふ…花丸あげちゃおっかな♪",
+                    "ね、ね。\nあーしと埼玉、どっちが好き？\n……えっ、埼玉？\nふぅん…へぇ……まあ、埼玉が好きなら許したげる",
+                    "あーしとここまで仲良くしてくれる人ってあんまりいなかったんだよね～。\nなんで、って…そりゃあ、カリスマの抱える孤独、ってやつ？\nちょっと、なんで笑ってんの！"
                   ],
                   "no": [
-                    "<u_name>さん、大好きです…。\nもう5年も待てないくらい、あなたが好きなんです…",
-                    "<u_name>さんが小学五年生相手にガチ告白したこと、一生ネタにしますからね♪\nへへっ、一生忘れません、ずっと…ずっと…",
-                    "(無言で頬を摺り寄せてくる…。<u_name>の体温を感じながらのんびりと過ごした…)"
+                    "ね、ね。あーしとカレー、どっちが好き？\nとーぜん！あーしだよね？\n前みたいにカレーって言ったりしないよね？\nあー！目ぇ反らすなー！ちゅーしちゃうぞ！",
+                    "え、埼玉とキミどっちが好きかって？\nそれは…うーん……。\n\nお、同じくらい…じゃダメ？",
+                    "突然ですがあーし、無性に寂しくなりました。\nハグを要求します。\nなでなでも。後ちゅーも。\n笑ってないでぎゅーってしーてーよー！"
                   ]
                 }
               }
