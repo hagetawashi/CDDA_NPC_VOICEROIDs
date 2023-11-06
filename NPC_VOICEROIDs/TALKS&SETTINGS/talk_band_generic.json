@@ -35,7 +35,7 @@
                 "no": [
                   "やあ、どうした親友？\n少し話でもするか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
                   "ああ、この時間を待っていたんだ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                  "なんだい、親友？\nなんでも話してくれ、どんな些細なことでもいいよ\n"
+                  "なんだい、親友？\nなんでも話してくれ、どんな些細なことでもいいよ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
                 ]
               }
             }
