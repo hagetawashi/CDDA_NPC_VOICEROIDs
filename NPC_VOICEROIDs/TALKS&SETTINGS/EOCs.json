@@ -26,28 +26,28 @@
     "condition": {
       "and": [
         { "u_has_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
-        { "math": [ "u_counter_var_love_points_love_point", ">=", "50" ] }
+        { "math": [ "u_counter_var_love_points_love_point", ">=", "30" ] }
       ]
     },
     "effect": [
+      { "u_cast_spell": { "id": "spell_lovers_guts_message" } },
       "u_prevent_death",
-      { "u_set_hp": 45, "only_increase": true, "target_part": "torso" },
-      { "u_set_hp": 45, "only_increase": true, "target_part": "head" },
-      { "u_set_hp": 45, "only_increase": true, "target_part": "arm_l" },
-      { "u_set_hp": 45, "only_increase": true, "target_part": "arm_r" },
-      { "u_set_hp": 45, "only_increase": true, "target_part": "leg_r" },
-      { "u_set_hp": 45, "only_increase": true, "target_part": "leg_l" },
-      { "math": [ "u_counter_var_love_points_love_point", "-=", "50" ] },
-      { "u_cast_spell": { "id": "spell_lovers_guts_message" } }
+      { "u_set_hp": 25, "only_increase": true, "target_part": "torso" },
+      { "u_set_hp": 25, "only_increase": true, "target_part": "head" },
+      { "u_set_hp": 25, "only_increase": true, "target_part": "arm_l" },
+      { "u_set_hp": 25, "only_increase": true, "target_part": "arm_r" },
+      { "u_set_hp": 25, "only_increase": true, "target_part": "leg_r" },
+      { "u_set_hp": 25, "only_increase": true, "target_part": "leg_l" },
+      { "math": [ "u_counter_var_love_points_love_point", "-=", "30" ] }
     ]
   },
   {
     "id": "spell_lovers_guts_message",
     "type": "SPELL",
-    "name": "spell_lovers_guts_message",
+    "name": "ガッツ発動時のポップアップ",
     "description": "メッセージを表示するためのダミースペル",
     "valid_targets": [ "self", "hostile", "ally" ],
-    "max_level": 1,
+    "max_level": 0,
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
     "base_casting_time": 0,
     "shape": "blast",

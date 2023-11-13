@@ -151,6 +151,7 @@
         "effect": [
           { "npc_lose_trait": "band_lv2" },
           { "npc_add_trait": "band_lv3" },
+          { "npc_add_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
           {
             "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世界で最も得難い宝と言えます！",
             "popup": true
@@ -169,7 +170,6 @@
         "effect": [
           { "npc_lose_trait": "band_lv3" },
           { "npc_add_trait": "band_lv4" },
-          { "npc_add_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
           {
             "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世で最も特別な存在になりました！",
             "popup": true

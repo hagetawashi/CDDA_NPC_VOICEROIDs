@@ -173,87 +173,88 @@
   {
     "id": [ "TALK_EAT_ITEM_TUMUGI" ],
     "type": "talk_topic",
-    "dynamic_line": "お、おやつの時間ですか？",
+    "dynamic_line": "おっ、なになにー？\nなんか食べるの？",
     "repeat_responses": [
       {
         "for_item": [
-          "fresh_fries",
-          "hotdogs_newyork",
-          "hotdogs_newyork_wheat_free",
-          "cow_candy",
-          "cookies_egg",
-          "chocolate",
-          "chips2",
-          "baklava",
-          "voiro_zunda",
-          "sandwich_honey",
-          "nachosv"
+          "cottage_cheese_with_fruit",
+          "cottage_cheese_with_savory_veg",
+          "veggy_cooked",
+          "rehydrated_veggy",
+          "brandied_fruit",
+          "rehydrated_fruit",
+          "V8",
+          "broth",
+          "soup_mushroom",
+          "apple_cider"
         ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+1" }
       },
       {
         "for_item": [
-          "buttercream",
-          "choc_pancakes",
-          "gelatin_dessert_processed",
-          "nachosc",
-          "powder_candy",
-          "homemade_toasterpastry",
-          "toastem4",
-          "juice",
-          "oj_fresh",
-          "can_coconut"
+          "veggy_pickled",
+          "soup_veggy",
+          "dandelionburdock_fried",
+          "soup_woods_egg",
+          "bamboo_fried",
+          "fiddlehead_sauteed",
+          "walnut_roasted",
+          "meatball",
+          "tomato_juice",
+          "pineapple_juice"
         ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+2" }
       },
       {
         "for_item": [
-          "nachos",
-          "chocpretzels",
-          "pretzels",
-          "gelatin_dessert_fruit",
-          "maltballs",
-          "spezi",
-          "pineapple_juice",
-          "lemonade",
-          "toasterpastry",
-          "eggnog"
+          "sausage",
+          "sweet_sausage",
+          "bratwurst_sausage",
+          "chocolate",
+          "blt",
+          "blt_wheat_free",
+          "meat_fried",
+          "cracklins",
+          "chili",
+          "cookies",
+          "nachos"
         ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+3" }
       },
       {
         "for_item": [
-          "popcorn2",
-          "popcorn3",
-          "choc_waffles",
-          "candy2",
-          "grahmcrackers_roe",
-          "nachosvc",
-          "milk",
-          "milk_coffee_sweetened",
-          "sweet_sausage",
-          "homemade_burrito"
+          "currywurst",
+          "smores",
+          "chocpretzels",
+          "choc_pancakes",
+          "toastem4",
+          "hazelnut_roasted",
+          "hallula",
+          "brioche",
+          "milk_choc",
+          "hot_chocolate"
         ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+4" }
       },
       {
         "for_item": [
-          "caramel_apple",
-          "candy3gator",
-          "marshmallow",
-          "sandwich_fairy",
-          "sandwich_fairy_wheat_free",
-          "smores",
-          "mex_chocolate",
-          "chilidogs",
-          "chilidogs_wheat_free",
-          "pudding",
-          "yoghurt"
+          "curry_veggy",
+          "PBJ_Toast",
+          "PBJ_Toast_wheat_free",
+          "peanut_butter_toast",
+          "peanut_butter_toast_wheat_free",
+          "hazelnut_cake",
+          "tiramisu",
+          "paella_valenciana",
+          "icecream_fruit",
+          "milk_tea_sweetened",
+          "milk_coffee_sweetened",
+          "mex_chocolate"
         ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+5" }
       },
       {
-        "for_item": [ "voiro_zundamochi", "hot_chocolate", "soup_three_sisters" ],
+        "for_item": [ "curry_meat", "peanut_shelled", "milkshake_deluxe_choc" ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+EX" }
       }
     ],
