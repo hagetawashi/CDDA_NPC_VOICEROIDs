@@ -2,7 +2,7 @@
   {
     "id": "TALK_STRANGER_KIRITAN",
     "type": "talk_topic",
-    "dynamic_line": "<youname_kiritan>腐ってない？話できる？やったー！久しぶりの人間だ！\nあの、良ければわたしも一緒に行動していいですか！？",
+    "dynamic_line": "腐ってない？話できる？やったー！久しぶりの人間だ！\nあの、良ければわたしも一緒に行動していいですか！？",
     "responses": [
       {
         "text": "子供でも特別扱いは出来ないぞ。\nそれでも良ければ一緒に来るといい。",
