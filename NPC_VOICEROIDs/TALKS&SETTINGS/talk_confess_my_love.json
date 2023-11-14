@@ -1,3 +1,8 @@
+Cataclysm: Dark Days Ahead JSON Web Linting Tool
+This is a tool to help modders and editors of the open source game Cataclysm: Dark Days Ahead write JSON in the game's expected format.
+
+Paste some JSON into the field below and click "Lint" to run an autoformatter against it.
+
 [
   {
     "id": [ "TALK_CHAIN_EXP" ],
@@ -49,7 +54,16 @@
         "response": { "text": "<topic_item>を渡す", "topic": "TALK_CHAIN_EXP2" }
       }
     ],
-    "responses": [ { "text": "すまない、まだ準備ができていないようだ", "topic": "TALK_NONE" } ]
+    "responses": [
+      {
+        "text": "すまない、まだ準備ができていないようだ",
+        "effect": {
+          "u_message": "仲を進展させるには特別な指輪を所持している必要があります。\n街を探してみたり、製作を学んで自作しましょう！",
+          "popup": true
+        },
+        "topic": "TALK_NONE"
+      }
+    ]
   },
   {
     "id": [ "TALK_CHAIN_EXP2" ],
