@@ -7,35 +7,35 @@
         {
           "npc_has_trait": "band_lv0",
           "yes": [
-            "どうした？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-            "ああ、聞いてるよ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-            "話をするのか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
+            "どうした？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+            "ああ、聞いてるよ\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+            "話をするのか？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
           ],
           "no": {
             "npc_has_trait": "band_lv1",
             "yes": [
-              "ちゃんと聞いてるよ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-              "なんだい？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-              "どうした、友よ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
+              "ちゃんと聞いてるよ\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+              "なんだい？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+              "どうした、友よ\n現在好感度:<npc_val:counter_var_love_points_love_point>"
             ],
             "no": {
               "npc_has_trait": "band_lv2",
               "yes": [
-                "話をしたいのか？\nいいとも\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                "なんでも言ってくれ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                "相棒、何か用かい？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
+                "話をしたいのか？\nいいとも\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                "なんでも言ってくれ\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                "相棒、何か用かい？\n現在好感度:<npc_val:counter_var_love_points_love_point>"
               ],
               "no": {
                 "npc_has_trait": "band_lv3",
                 "yes": [
-                  "親友、どうかしたか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                  "話をしようじゃないか\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                  "遠慮するな、何でも話してくれ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
+                  "親友、どうかしたか？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "話をしようじゃないか\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "遠慮するな、何でも話してくれ\n現在好感度:<npc_val:counter_var_love_points_love_point>"
                 ],
                 "no": [
-                  "やあ、どうした親友？\n少し話でもするか？\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                  "ああ、この時間を待っていたんだ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>",
-                  "なんだい、親友？\nなんでも話してくれ、どんな些細なことでもいいよ\n現在好感度:<npc_val:counter_var_adjust_band_band_count>"
+                  "やあ、どうした親友？\n少し話でもするか？\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "ああ、この時間を待っていたんだ\n現在好感度:<npc_val:counter_var_love_points_love_point>",
+                  "なんだい、親友？\nなんでも話してくれ、どんな些細なことでもいいよ\n現在好感度:<npc_val:counter_var_love_points_love_point>"
                 ]
               }
             }
