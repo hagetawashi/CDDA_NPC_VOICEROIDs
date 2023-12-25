@@ -6,7 +6,6 @@
     "verb": "会話しています",
     "based_on": "time",
     "interruptable": false,
-    "suspendable": false,
     "interruptable_with_kb": false
   },
   {
@@ -14,9 +13,7 @@
     "type": "activity_type",
     "activity_level": "ACTIVE_EXERCISE",
     "verb": "二人で運動しています",
-    "suspendable": false,
-    "based_on": "time",
-    "no_resume": true
+    "based_on": "time"
   },
   {
     "type": "effect_on_condition",

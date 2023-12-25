@@ -15,6 +15,7 @@
     "dex": 8,
     "int": 7,
     "per": 8,
+    "personality": { "aggression": 2, "bravery": 1, "collector": -1, "altruism": 3 },
     "<acknowledged>": "<acknowledged_tumugi>",
     "<camp_food_thanks>": "<camp_food_thanks_tumugi>",
     "<camp_larder_empty>": "<camp_larder_empty_tumugi>",

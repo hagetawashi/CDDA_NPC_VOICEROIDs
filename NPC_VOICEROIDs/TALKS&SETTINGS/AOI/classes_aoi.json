@@ -15,6 +15,7 @@
     "dex": 8,
     "int": 8,
     "per": 8,
+    "personality": { "aggression": 0, "bravery": -1, "collector": 3, "altruism": 5 },
     "<acknowledged>": "<acknowledged_aoi>",
     "<camp_food_thanks>": "<camp_food_thanks_aoi>",
     "<camp_larder_empty>": "<camp_larder_empty_aoi>",
