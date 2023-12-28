@@ -1,0 +1,28 @@
+[
+  {
+    "type": "scenario",
+    "id": "voiceroid_of_the_dead",
+    "name": "VOICEROID OF THE DEAD",
+    "points": -10,
+    "description": "世界の崩壊に際し、人口の多い街の中に居ようと思う人は多くは無いでしょう。その中の一人だったあなたは山奥にある小さな小屋を見つけました。慎重に様子をうかがって見ると、中から人の気配がしてきます。協力するのか敵対するのか、いずれにせよ彼らに対しどう接するか、決めなければなりません。",
+    "allowed_locs": [ "sloc_voiro_cabin" ],
+    "start_name": "秘密の隠れ家",
+    "eoc": [ "scenario_voiro" ],
+    "flags": [ "CITY_START", "LONE_START" ]
+  },
+  {
+    "type": "start_location",
+    "id": "sloc_voiro_cabin",
+    "name": "秘密の隠れ家",
+    "terrain": [ "cabin_voiro_driveway" ],
+    "flags": [ "ALLOW_OUTSIDE" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "scenario_voiro",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_voiro", "om_terrain": "cabin_voiro" }
+    ]
+  }
+]
