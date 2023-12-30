@@ -46,7 +46,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_bombastic_perks_initialize",
+    "id": "EOC_scenario_love_is_over",
     "eoc_type": "EVENT",
     "required_event": "game_begin",
     "condition": { "u_has_var": "love_is_over", "type": "flag", "context": "love_is_over", "value": "yes" },
