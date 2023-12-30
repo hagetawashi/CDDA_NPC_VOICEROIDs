@@ -24,5 +24,99 @@
     "effect": [
       { "mapgen_update": "scenario_spawn_voiro", "om_terrain": "cabin_voiro" }
     ]
+  },
+  {
+    "type": "scenario",
+    "id": "love_is_over",
+    "name": "Love is over.",
+    "points": -3,
+    "description": "大変動を起こした世界で何とか生き残った後、偶然出会ったパートナーと交流を深めてきました。しかし、些細なミスから重大な問題が起きてしまいました。",
+    "allowed_locs": [ "sloc_voiro_cabin" ],
+    "start_name": "秘密の隠れ家",
+    "eoc": [ "scenario_love_is_over" ],
+    "flags": [ "CITY_START", "LONE_START" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "scenario_love_is_over",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "u_add_var": "love_is_over", "type": "flag", "context": "love_is_over", "value": "yes" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_bombastic_perks_initialize",
+    "eoc_type": "EVENT",
+    "required_event": "game_begin",
+    "condition": { "u_has_var": "love_is_over", "type": "flag", "context": "love_is_over", "value": "yes" },
+    "effect": [
+      { "open_dialogue": { "topic": "TALK_CHOICE_NPC_1" } },
+      { "queue_eocs": "EOC_love_is_over_infected", "time_in_future": "1 seconds" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_love_is_over_infected",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "u_add_effect": "infected", "duration": 1 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_IA",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_ia", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_AOI",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_aoi", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_AKANE",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_akane", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_AKARI",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_akari", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_KIRITAN",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_kiritan", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_TUMUGI",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_tumugi", "om_terrain": "cabin_voiro" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_IS_OVER_YUKARI",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "effect": [
+      { "mapgen_update": "scenario_spawn_yukari", "om_terrain": "cabin_voiro" }
+    ]
   }
 ]

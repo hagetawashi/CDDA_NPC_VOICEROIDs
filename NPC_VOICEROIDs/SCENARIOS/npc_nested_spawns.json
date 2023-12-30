@@ -15,5 +15,82 @@
         { "class": "AKARI", "x": 16, "y": 12 }
       ]
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_ia",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_IA", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_aoi",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_AOI", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_akane",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_AKANE", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_akari",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_AKARI", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_kiritan",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_KIRITAN", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_tumugi",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_TUMUGI", "x": 17, "y": 12 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "scenario_spawn_yukari",
+    "method": "json",
+    "object": {
+      "faction_owner": [ { "id": "your_followers", "x": [ 1, 23 ], "y": [ 1, 23 ] } ],
+      "place_npcs": [ 
+        { "class": "ST_YUKARI", "x": 17, "y": 12 }
+      ]
+    }
   }
 ]
