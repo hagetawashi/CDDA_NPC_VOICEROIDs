@@ -50,9 +50,11 @@
     "eoc_type": "EVENT",
     "required_event": "game_begin",
     "condition": { "u_has_var": "love_is_over", "type": "flag", "context": "love_is_over", "value": "yes" },
+    "deactivate_condition": { "not": { "u_has_var": "love_is_over", "type": "flag", "context": "love_is_over", "value": "yes" } },
     "effect": [
       { "open_dialogue": { "topic": "TALK_CHOICE_NPC_1" } },
-      { "queue_eocs": "EOC_love_is_over_infected", "time_in_future": "1 seconds" }
+      { "queue_eocs": "EOC_love_is_over_infected", "time_in_future": "1 seconds" },
+      { "u_lose_var": "love_is_over", "type": "flag", "context": "love_is_over" }
     ]
   },
   {
