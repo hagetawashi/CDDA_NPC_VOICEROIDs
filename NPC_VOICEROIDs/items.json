@@ -198,5 +198,105 @@
       "msg": "手紙を元通りに折りたたみました",
       "moves": 100
     }
+  },
+  {
+    "id": "lovers_photo_ia",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(IA)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。照れたようにはにかむ笑顔を見ていると胸が温かくなります。",
+    "weight": "1 g",
+    "volume": "5 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_akari",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(あかり)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。照れたようにはにかむ笑顔を見ていると胸が温かくなります。",
+    "weight": "1 g",
+    "volume": "5 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_voiro",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真" },
+    "description": "恋人と一緒に撮影した思い出の写真です。にっこりと穏やかな笑顔を浮かべていて、幸せそうです。",
+    "weight": "1 g",
+    "volume": "5 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "lovers_photo_ia",
+        "name": { "str": "恋人の写真(IA)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたようにはにかむ笑顔を浮かべています。",
+        "weight": 25,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_akari",
+        "name": { "str": "恋人の写真(あかり)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、花が咲くような笑顔で食事しています。",
+        "weight": 20,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_akane",
+        "name": { "str": "恋人の写真(茜)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、満面の笑みでピースサインを作っています。",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_aoi",
+        "name": { "str": "恋人の写真(葵)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたように視線を反らし、ピースサインを作っています。",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_kiritan",
+        "name": { "str": "恋人の写真(きりたん)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、撮影主であるあなたに目線を合わせようと背伸びしています。",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_tumugi",
+        "name": { "str": "恋人の写真(つむぎ)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、ウィンクしながらピースサインを作っています。",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "lovers_photo_yukari",
+        "name": { "str": "恋人の写真(ゆかり)" },
+        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、投げキッスをしています。",
+        "weight": 15,
+        "append": true
+      }
+    ]
   }
 ]

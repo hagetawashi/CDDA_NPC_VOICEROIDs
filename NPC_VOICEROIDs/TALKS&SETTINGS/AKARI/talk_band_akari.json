@@ -65,13 +65,50 @@
         "topic": "TALK_EAT_ITEM_AKARI"
       },
       {
+        "text": "写真撮影をする",
+        "topic": "TALK_DONE",
+        "condition": {
+          "and": [
+            { "not": { "npc_has_var": "already_shot", "type": "flag", "context": "photographed", "value": "yes" } },
+            { "npc_has_any_trait": [ "band_lv4", "band_lv5" ] },
+            { "or": [ { "u_has_item": "camera" }, { "u_has_item": "camera_pro" } ] }
+          ]
+        },
+        "effect": [
+          { "npc_add_var": "already_shot", "type": "flag", "context": "photographed", "value": "yes" },
+          {
+            "u_message": "あなたがおもむろにカメラを向けると、<npc_name>は慌ててポーズを取ってくれました！",
+            "popup": true
+          },
+          { "u_spawn_item": "lovers_photo_akari", "count": 1 }
+        ]
+      },
+      {
+        "text": "製作を手伝ってもらう",
+        "topic": "TALK_DONE",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "band_help_friends" } },
+            { "npc_has_any_trait": [ "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] },
+            { "not": { "u_has_effect": "band_collecting" } }
+          ]
+        },
+        "effect": [
+          {
+            "u_message": "<npc_name>は頷くと作業を手伝うための準備を始めました。",
+            "popup": true
+          },
+          { "run_eocs": "EOC_FRIENDS_HELP_SET" }
+        ]
+      },
+      {
         "text": "弁当を作ってもらう",
         "topic": "TALK_MAKING_BENTO",
         "condition": {
           "and": [
             { "not": { "u_has_effect": "band_collecting" } },
             { "npc_has_any_trait": [ "band_lv4", "band_lv5" ] },
-            { "math": [ "u_counter_var_love_points_love_point", "<=", "50" ] }
+            { "math": [ "n_counter_var_love_points_love_point", ">=", "50" ] }
           ]
         }
       },
