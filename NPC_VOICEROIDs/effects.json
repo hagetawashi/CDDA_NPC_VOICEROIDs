@@ -97,6 +97,14 @@
     ]
   },
   {
+    "type": "mutation",
+    "id": "band_help_friends",
+    "name": { "str": "仲間の助力" },
+    "points": 0,
+    "description": "仲間の助力により製作効率が上がっています。製作速度が+25%上昇します。",
+    "crafting_speed_multiplier": 1.25
+  },
+  {
     "type": "effect_type",
     "id": "band_talk_end",
     "name": [ "穏やかな時間" ],
