@@ -92,7 +92,7 @@
       },
       {
         "text": "絆を結ぶ",
-        "topic": "TALK_BAND_MENU",
+        "topic": "TALK_ALLY_SOCIAL",
         "condition": { "not": { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" } },
         "effect": [
           { "npc_add_trait": "band_lv0" },
@@ -105,7 +105,7 @@
       },
       {
         "text": "絆を深める（LV1）",
-        "topic": "TALK_BAND_MENU",
+        "topic": "TALK_ALLY_SOCIAL",
         "condition": {
           "and": [
             { "math": [ "n_counter_var_love_points_love_point", ">=", "10" ] },
@@ -123,7 +123,7 @@
       },
       {
         "text": "絆を深める（LV2）",
-        "topic": "TALK_BAND_MENU",
+        "topic": "TALK_ALLY_SOCIAL",
         "condition": {
           "and": [
             { "math": [ "n_counter_var_love_points_love_point", ">=", "20" ] },
@@ -141,7 +141,7 @@
       },
       {
         "text": "絆を深める（LV3）",
-        "topic": "TALK_BAND_MENU",
+        "topic": "TALK_ALLY_SOCIAL",
         "condition": {
           "and": [
             { "math": [ "n_counter_var_love_points_love_point", ">=", "30" ] },
@@ -160,7 +160,7 @@
       },
       {
         "text": "絆を深める（EX）",
-        "topic": "TALK_BAND_MENU",
+        "topic": "TALK_ALLY_SOCIAL",
         "condition": {
           "and": [
             { "math": [ "n_counter_var_love_points_love_point", ">=", "50" ] },
