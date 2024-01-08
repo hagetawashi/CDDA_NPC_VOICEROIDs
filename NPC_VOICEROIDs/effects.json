@@ -101,8 +101,8 @@
     "id": "band_help_friends",
     "name": { "str": "仲間の助力" },
     "points": 0,
-    "description": "仲間の助力により製作効率が上がっています。製作速度が+25%上昇します。",
-    "crafting_speed_multiplier": 1.25
+    "description": "仲間の助力により製作効率が上がっています。製作速度が+100%上昇します。",
+    "crafting_speed_multiplier": 2
   },
   {
     "type": "effect_type",
@@ -120,6 +120,14 @@
     "id": "band_collecting",
     "name": [ "素材収集中" ],
     "desc": [ "あなたの冒険の裏で仲間たちが様々な素材を回収しています" ],
+    "rating": "good",
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "band_resting",
+    "name": [ "休息中(仲間)" ],
+    "desc": [ "仲間たちは現在休息を取っています。" ],
     "rating": "good",
     "show_in_info": false
   },

@@ -64,7 +64,7 @@
     "id": "EOC_FRIENDS_HELP_SET",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "queue_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "4 hours" },
+      { "queue_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "8 hours" },
       { "u_add_trait": "band_help_friends" }
     ]
   },
@@ -73,7 +73,7 @@
     "id": "EOC_FRIENDS_HELP_DEL",
     "eoc_type": "ACTIVATION",
     "effect": [
-      { "u_add_effect": "band_collecting", "duration": "8 hours" },
+      { "u_add_effect": "band_resting", "duration": "8 hours" },
       { "u_lose_trait": "band_help_friends" }
     ]
   }

@@ -92,7 +92,7 @@
           "and": [
             { "not": { "u_has_trait": "band_help_friends" } },
             { "npc_has_any_trait": [ "band_lv2", "band_lv3", "band_lv4", "band_lv5" ] },
-            { "not": { "u_has_effect": "band_collecting" } }
+            { "not": { "u_has_effect": "band_resting" } }
           ]
         },
         "effect": [
