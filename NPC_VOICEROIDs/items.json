@@ -205,9 +205,9 @@
     "looks_like": "family_photo",
     "category": "other",
     "name": { "str": "恋人の写真(IA)" },
-    "description": "恋人と一緒に撮影した思い出の写真です。照れたようにはにかむ笑顔を見ていると胸が温かくなります。",
-    "weight": "1 g",
-    "volume": "5 ml",
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたようにはにかむ笑顔を浮かべています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
     "price": 800,
     "price_postapoc": 0,
     "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
@@ -221,9 +221,9 @@
     "looks_like": "family_photo",
     "category": "other",
     "name": { "str": "恋人の写真(あかり)" },
-    "description": "恋人と一緒に撮影した思い出の写真です。照れたようにはにかむ笑顔を見ていると胸が温かくなります。",
-    "weight": "1 g",
-    "volume": "5 ml",
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、花が咲くような笑顔で食事しています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
     "price": 800,
     "price_postapoc": 0,
     "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
@@ -232,70 +232,182 @@
     "color": "light_gray"
   },
   {
-    "id": "lovers_photo_voiro",
+    "id": "lovers_photo_akane",
     "type": "GENERIC",
     "looks_like": "family_photo",
     "category": "other",
-    "name": { "str": "恋人の写真" },
-    "description": "恋人と一緒に撮影した思い出の写真です。にっこりと穏やかな笑顔を浮かべていて、幸せそうです。",
-    "weight": "1 g",
-    "volume": "5 ml",
+    "name": { "str": "恋人の写真(茜)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、満面の笑みでピースサインを作っています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
     "price": 800,
     "price_postapoc": 0,
     "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
     "material": [ "paper" ],
     "symbol": "*",
-    "color": "light_gray",
-    "variant_type": "generic",
-    "variants": [
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_aoi",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(葵)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたように視線を反らし、ピースサインを作っています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_kiritan",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(きりたん)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、撮影主であるあなたに目線を合わせようと背伸びしています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_tumugi",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(つむぎ)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、ウィンクしながらピースサインを作っています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "lovers_photo_yukari",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真(ゆかり)" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、投げキッスをしています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "copper_locket",
+    "type": "ARMOR",
+    "name": { "str": "copper locket" },
+    "copy-from": "copper_locket",
+    "pocket_data": [
       {
-        "id": "lovers_photo_ia",
-        "name": { "str": "恋人の写真(IA)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたようにはにかむ笑顔を浮かべています。",
-        "weight": 25,
-        "append": true
-      },
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_weight": "12 mg",
+        "max_contains_volume": "1 ml",
+        "description": "Slot for a photograph",
+        "item_restriction": [ 
+          "wallet_photo",
+          "lovers_photo_ia",
+          "lovers_photo_akari",
+          "lovers_photo_akane",
+          "lovers_photo_aoi",
+          "lovers_photo_kiritan",
+          "lovers_photo_tumugi",
+          "lovers_photo_yukari"
+          ]
+      }
+    ]
+  },
+  {
+    "id": "gold_locket",
+    "type": "ARMOR",
+    "name": { "str": "gold locket" },
+    "copy-from": "gold_locket",
+    "pocket_data": [
       {
-        "id": "lovers_photo_akari",
-        "name": { "str": "恋人の写真(あかり)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、花が咲くような笑顔で食事しています。",
-        "weight": 20,
-        "append": true
-      },
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_weight": "12 mg",
+        "max_contains_volume": "1 ml",
+        "description": "Slot for a photograph",
+        "item_restriction": [ 
+          "wallet_photo",
+          "lovers_photo_ia",
+          "lovers_photo_akari",
+          "lovers_photo_akane",
+          "lovers_photo_aoi",
+          "lovers_photo_kiritan",
+          "lovers_photo_tumugi",
+          "lovers_photo_yukari"
+          ]
+      }
+    ]
+  },
+  {
+    "id": "platinum_locket",
+    "type": "ARMOR",
+    "name": { "str": "platinum locket" },
+    "copy-from": "platinum_locket",
+    "pocket_data": [
       {
-        "id": "lovers_photo_akane",
-        "name": { "str": "恋人の写真(茜)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、満面の笑みでピースサインを作っています。",
-        "weight": 15,
-        "append": true
-      },
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_weight": "12 mg",
+        "max_contains_volume": "1 ml",
+        "description": "Slot for a photograph",
+        "item_restriction": [ 
+          "wallet_photo",
+          "lovers_photo_ia",
+          "lovers_photo_akari",
+          "lovers_photo_akane",
+          "lovers_photo_aoi",
+          "lovers_photo_kiritan",
+          "lovers_photo_tumugi",
+          "lovers_photo_yukari"
+          ]
+      }
+    ]
+  },
+  {
+    "id": "silver_locket",
+    "type": "ARMOR",
+    "name": { "str": "silver locket" },
+    "copy-from": "silver_locket",
+    "pocket_data": [
       {
-        "id": "lovers_photo_aoi",
-        "name": { "str": "恋人の写真(葵)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、照れたように視線を反らし、ピースサインを作っています。",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "lovers_photo_kiritan",
-        "name": { "str": "恋人の写真(きりたん)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、撮影主であるあなたに目線を合わせようと背伸びしています。",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "lovers_photo_tumugi",
-        "name": { "str": "恋人の写真(つむぎ)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、ウィンクしながらピースサインを作っています。",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "lovers_photo_yukari",
-        "name": { "str": "恋人の写真(ゆかり)" },
-        "description": "恋人と一緒に撮影した思い出の写真です。写真の中の彼女は、投げキッスをしています。",
-        "weight": 15,
-        "append": true
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_weight": "12 mg",
+        "max_contains_volume": "1 ml",
+        "description": "Slot for a photograph",
+        "item_restriction": [ 
+          "wallet_photo",
+          "lovers_photo_ia",
+          "lovers_photo_akari",
+          "lovers_photo_akane",
+          "lovers_photo_aoi",
+          "lovers_photo_kiritan",
+          "lovers_photo_tumugi",
+          "lovers_photo_yukari"
+          ]
       }
     ]
   }
