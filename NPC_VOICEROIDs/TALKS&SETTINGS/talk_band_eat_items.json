@@ -51,7 +51,14 @@
             "u_message": "仲良く分け合いながら談笑しました…。\n<npc_name>は美味しそうに食べています…。",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 1,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 1
+    }
       }
     ]
   },
@@ -106,7 +113,14 @@
             "u_message": "仲良く分け合いながら談笑しました…。\n<npc_name>は嬉しそうに食べています…。",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 1,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 2
+    }
       }
     ]
   },
@@ -161,7 +175,14 @@
             "u_message": "仲良く分け合いながら談笑しました…。<npc_name>はとても嬉しそうに食べています…。",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 2,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 3
+    }
       }
     ]
   },
@@ -216,7 +237,14 @@
             "u_message": "仲良く分け合いながら談笑しました…。\n<npc_name>は終始笑顔です！",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 2,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 4
+    }
       }
     ]
   },
@@ -271,7 +299,14 @@
             "u_message": "仲良く分け合いながら談笑しました…。\n<npc_name>はとても一生懸命食べています！",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 3,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 5
+    }
       }
     ]
   },
@@ -326,7 +361,14 @@
             "u_message": "仲良くを分け合いながら談笑しました…。\n<npc_name>は嬉しさのあまりあなたに抱きついてきました！",
             "popup": true
           }
-        ]
+        ],
+    "opinion": {
+      "trust": 4,
+      "fear": -1,
+      "value": 1,
+      "anger": -1,
+      "favors": 8
+    }
       }
     ]
   }
