@@ -29,12 +29,7 @@
     "effect": [
       { "u_cast_spell": { "id": "spell_lovers_guts_message" } },
       "u_prevent_death",
-      { "u_set_hp": 25, "only_increase": true, "target_part": "torso" },
-      { "u_set_hp": 25, "only_increase": true, "target_part": "head" },
-      { "u_set_hp": 25, "only_increase": true, "target_part": "arm_l" },
-      { "u_set_hp": 25, "only_increase": true, "target_part": "arm_r" },
-      { "u_set_hp": 25, "only_increase": true, "target_part": "leg_r" },
-      { "u_set_hp": 25, "only_increase": true, "target_part": "leg_l" },
+      { "math": [ "u_hp('ALL')", "=", "25" ] },
       { "math": [ "u_counter_var_love_points_love_point", "-=", "30" ] }
     ]
   },
