@@ -6,7 +6,7 @@
     "responses": [
       { "text": "シェルターで何か起こったのか？", "topic": "TALK_STORY2_IA" },
       {
-        "condition": { "compare_int": [ { "npc_val": "npc_trust" }, ">=", { "const": 5 } ] },
+        "condition": { "math": [ "n_val('npc_trust')", ">=", "5"  ] },
         "text": "その友達と妹の話を聞いてもいいかな？",
         "topic": "TALK_STORY_V1_IA"
       }
