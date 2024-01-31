@@ -71,5 +71,27 @@
       { "u_add_effect": "band_resting", "duration": "8 hours" },
       { "u_lose_trait": "band_help_friends" }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_event_eat_items_love",
+    "eoc_type": "EVENT",
+    "required_event": "character_eats_item",
+    "condition": {
+      "and": [
+        { "u_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
+        "u_is_npc"
+      ]
+    },
+    "effect": [
+      { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(4) + 1" ] }
+    ],
+    "opinion": {
+    "trust": 2,
+    "fear": -1,
+    "value": 1,
+    "anger": -1
+    }
+    
   }
 ]
