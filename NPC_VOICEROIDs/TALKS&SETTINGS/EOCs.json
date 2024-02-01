@@ -58,40 +58,44 @@
     "type": "effect_on_condition",
     "id": "EOC_FRIENDS_HELP_SET",
     "eoc_type": "ACTIVATION",
-    "effect": [
-      { "queue_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "8 hours" },
-      { "u_add_trait": "band_help_friends" }
-    ]
+    "effect": [ { "queue_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "8 hours" }, { "u_add_trait": "band_help_friends" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_FRIENDS_HELP_DEL",
     "eoc_type": "ACTIVATION",
-    "effect": [
-      { "u_add_effect": "band_resting", "duration": "8 hours" },
-      { "u_lose_trait": "band_help_friends" }
-    ]
+    "effect": [ { "u_add_effect": "band_resting", "duration": "8 hours" }, { "u_lose_trait": "band_help_friends" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_event_eat_items_love",
     "eoc_type": "EVENT",
     "required_event": "character_eats_item",
+    "condition": { "and": [ { "u_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" }, "u_is_npc" ] },
+    "effect": [ { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(4) + 1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_event_play_game_love",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
     "condition": {
       "and": [
         { "u_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-        "u_is_npc"
+        "u_is_npc",
+        {
+          "or": [
+            { "compare_string": [ "ACT_GAME", { "context_val": "activity" } ] },
+            { "compare_string": [ "ACT_GENERIC_GAME", { "context_val": "activity" } ] }
+          ]
+        },
+        { "not": { "u_has_effect": "band_talk_end" } }
       ]
     },
     "effect": [
-      { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(4) + 1" ] }
-    ],
-    "opinion": {
-    "trust": 2,
-    "fear": -1,
-    "value": 1,
-    "anger": -1
-    }
-    
+      { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(3) + 2" ] },
+      { "math": [ "u_timer_fun_rnd_u_waiting_on_play", "=", "time('now')" ] },
+      { "u_add_effect": "band_talk_end", "duration": "8 hours" }
+    ]
   }
 ]
