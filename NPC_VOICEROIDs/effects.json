@@ -18,9 +18,11 @@
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
-    "passive_mods": { "str_mod": 1, "int_mod": 1, "per_mod": 1, "dex_mod": 1 },
-    "movecost_modifier": 0.9,
-    "attackcost_modifier": 0.9
+    "enchantments": [
+      {
+        "values": [ { "value": "MAX_HP", "add": 3 }, { "value": "STRENGTH", "add": 1 }, { "value": "DEXTERITY", "add": 1 }, { "value": "INTELLIGENCE", "add": 1 }, { "value": "PERCEPTION", "add": 1 }, { "value": "MOVE_COST", "multiply": 0.9 } ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -31,9 +33,11 @@
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
-    "passive_mods": { "str_mod": 3, "int_mod": 3, "per_mod": 3, "dex_mod": 3 },
-    "movecost_modifier": 0.85,
-    "attackcost_modifier": 0.85
+    "enchantments": [
+      {
+        "values": [ { "value": "MAX_HP", "add": 9 }, { "value": "STRENGTH", "add": 3 }, { "value": "DEXTERITY", "add": 3 }, { "value": "INTELLIGENCE", "add": 3 }, { "value": "PERCEPTION", "add": 3 }, { "value": "MOVE_COST", "multiply": 0.85 } ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -44,9 +48,11 @@
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
-    "passive_mods": { "str_mod": 5, "int_mod": 5, "per_mod": 5, "dex_mod": 5 },
-    "movecost_modifier": 0.8,
-    "attackcost_modifier": 0.8
+    "enchantments": [
+      {
+        "values": [ { "value": "MAX_HP", "add": 15 }, { "value": "STRENGTH", "add": 5 }, { "value": "DEXTERITY", "add": 5 }, { "value": "INTELLIGENCE", "add": 5 }, { "value": "PERCEPTION", "add": 5 }, { "value": "MOVE_COST", "multiply": 0.8 } ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -57,17 +63,15 @@
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
-    "passive_mods": { "str_mod": 7, "int_mod": 7, "per_mod": 7, "dex_mod": 7 },
-    "movecost_modifier": 0.75,
-    "attackcost_modifier": 0.75,
     "enchantments": [
       {
-        "condition": "ALWAYS",
         "values": [
-          { "value": "STRENGTH", "add": { "math": [ "u_counter_var_love_points_love_point / 100" ] } },
-          { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 100" ] } },
-          { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 100" ] } },
-          { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 100" ] } }
+          { "value": "MAX_HP", "add": 21 },
+          { "value": "STRENGTH", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
+          { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
+          { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
+          { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
+          { "value": "MOVE_COST", "multiply": 0.7 }
         ]
       }
     ]
@@ -81,17 +85,16 @@
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
-    "passive_mods": { "str_mod": 7, "int_mod": 7, "per_mod": 7, "dex_mod": 7 },
-    "movecost_modifier": 0.65,
-    "attackcost_modifier": 0.65,
     "enchantments": [
       {
         "condition": "ALWAYS",
         "values": [
-          { "value": "STRENGTH", "add": { "math": [ "u_counter_var_love_points_love_point / 50" ] } },
-          { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 50" ] } },
-          { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 50" ] } },
-          { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 50" ] } }
+          { "value": "MAX_HP", "add": 25 },
+          { "value": "STRENGTH", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
+          { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
+          { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
+          { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
+          { "value": "MOVE_COST", "multiply": 0.65 }
         ]
       }
     ]
