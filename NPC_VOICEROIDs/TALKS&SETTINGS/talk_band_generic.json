@@ -44,9 +44,15 @@
       ]
     },
     "responses": [
-      { "//": "ランダムNPC用選択肢群", "text": "ゆったりと会話する", "topic": "TALK_NO_ITEM" },
+      {
+        "//": "ランダムNPC用選択肢群",
+        "condition": { "not": { "or": [ { "u_has_effect": "band_talk_end" }, { "npc_has_effect": "band_talk_end" } ] } },
+        "text": "会話する",
+        "topic": "TALK_NO_ITEM"
+      },
       {
         "//": "全部作ると飲食は差分が膨大になるので次の選択肢でアイテムを限定する",
+        "condition": { "not": { "or": [ { "u_has_effect": "band_talk_end" }, { "npc_has_effect": "band_talk_end" } ] } },
         "text": "食べながら会話する",
         "topic": "TALK_EAT_ITEM"
       },
@@ -76,14 +82,11 @@
           "and": [
             { "not": { "u_has_trait": "band_help_friends" } },
             { "npc_has_any_trait": [ "band_lv2", "band_lv3", "band_lv4" ] },
-            { "not": { "u_has_effect": "band_collecting" } }
+            { "not": { "u_has_effect": "band_resting" } }
           ]
         },
         "effect": [
-          {
-            "u_message": "<npc_name>は頷くと作業を手伝うための準備を始めました。",
-            "popup": true
-          },
+          { "u_message": "<npc_name>は頷くと作業を手伝うための準備を始めました。", "popup": true },
           { "run_eocs": "EOC_FRIENDS_HELP_SET" }
         ]
       },
@@ -190,42 +193,21 @@
     "type": "talk_topic",
     "dynamic_line": "何か食べるのか？\nいいね！",
     "repeat_responses": [
+      { "for_item": [ "jerky", "cola" ], "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+1" } },
       {
-        "for_item": [
-          "jerky",
-          "cola"
-        ],
-        "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+1" }
-      },
-      {
-        "for_item": [
-          "chocolate",
-          "lemonade"
-        ],
+        "for_item": [ "chocolate", "lemonade" ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+2" }
       },
       {
-        "for_item": [
-          "glazed_tenderloin",
-          "vodka"
-        ],
+        "for_item": [ "glazed_tenderloin", "vodka" ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+3" }
       },
       {
-        "for_item": [
-          "pie",
-          "whiskey",
-          "single_pot_whiskey",
-          "canadian_whiskey",
-          "single_malt_whiskey"
-        ],
+        "for_item": [ "pie", "whiskey", "single_pot_whiskey", "canadian_whiskey", "single_malt_whiskey" ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+4" }
       },
       {
-        "for_item": [
-          "royal_beef",
-          "honey_gold"
-        ],
+        "for_item": [ "royal_beef", "honey_gold" ],
         "response": { "text": "<topic_item>", "topic": "TALK_EAT_ITEMS_+5" }
       }
     ],

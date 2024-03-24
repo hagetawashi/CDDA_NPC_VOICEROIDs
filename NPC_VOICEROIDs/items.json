@@ -312,6 +312,22 @@
     "color": "light_gray"
   },
   {
+    "id": "lovers_photo_voiro",
+    "type": "GENERIC",
+    "looks_like": "family_photo",
+    "category": "other",
+    "name": { "str": "恋人の写真" },
+    "description": "恋人と一緒に撮影した思い出の写真です。写真の中の恋人は、穏やかな表情でピースサインをしています。",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": 800,
+    "price_postapoc": 0,
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "material": [ "paper" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
     "id": "copper_locket",
     "type": "ARMOR",
     "name": { "str": "copper locket" },
@@ -331,7 +347,8 @@
           "lovers_photo_aoi",
           "lovers_photo_kiritan",
           "lovers_photo_tumugi",
-          "lovers_photo_yukari"
+          "lovers_photo_yukari",
+          "lovers_photo_voiro"
           ]
       }
     ]
@@ -356,7 +373,8 @@
           "lovers_photo_aoi",
           "lovers_photo_kiritan",
           "lovers_photo_tumugi",
-          "lovers_photo_yukari"
+          "lovers_photo_yukari",
+          "lovers_photo_voiro"
           ]
       }
     ]
@@ -381,7 +399,8 @@
           "lovers_photo_aoi",
           "lovers_photo_kiritan",
           "lovers_photo_tumugi",
-          "lovers_photo_yukari"
+          "lovers_photo_yukari",
+          "lovers_photo_voiro"
           ]
       }
     ]
@@ -406,7 +425,8 @@
           "lovers_photo_aoi",
           "lovers_photo_kiritan",
           "lovers_photo_tumugi",
-          "lovers_photo_yukari"
+          "lovers_photo_yukari",
+          "lovers_photo_voiro"
           ]
       }
     ]

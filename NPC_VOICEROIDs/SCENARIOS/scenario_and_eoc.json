@@ -14,7 +14,7 @@
     "type": "start_location",
     "id": "sloc_voiro_cabin",
     "name": "秘密の隠れ家",
-    "terrain": [ "cabin_voiro_driveway" ],
+    "terrain": [ "cabin_voiro" ],
     "flags": [ "ALLOW_OUTSIDE" ]
   },
   {

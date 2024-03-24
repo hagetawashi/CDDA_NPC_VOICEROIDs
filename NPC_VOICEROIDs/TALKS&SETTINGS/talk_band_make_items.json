@@ -1017,7 +1017,7 @@
   {
     "id": [ "TALK_MAKING_POIPON8" ],
     "type": "talk_topic",
-    "dynamic_line": "必要アイテム一覧\nアルミニウム屑1個\n充電池(小/高容量)1個\n小型液晶ディスプレイ1個\nSDメモリーカード1個\nマザーボード1個",
+    "dynamic_line": "&必要アイテム一覧\nアルミニウム屑1個\n充電池(小/高容量)1個\n小型液晶ディスプレイ1個\nSDメモリーカード1個\nマザーボード1個",
     "responses": [
       {
         "topic": "TALK_DONE",
@@ -1044,7 +1044,7 @@
   {
     "id": [ "TALK_MAKING_POIPON_U92" ],
     "type": "talk_topic",
-    "dynamic_line": "必要アイテム一覧\nアルミニウム屑1個\n充電池(小/高容量)1個\n小型液晶ディスプレイ1個\nSDメモリーカード1個\nマザーボード1個",
+    "dynamic_line": "&必要アイテム一覧\nアルミニウム屑1個\n充電池(小/高容量)1個\n小型液晶ディスプレイ1個\nSDメモリーカード1個\nマザーボード1個",
     "responses": [
       {
         "topic": "TALK_DONE",

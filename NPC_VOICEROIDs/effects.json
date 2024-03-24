@@ -13,14 +13,14 @@
     "type": "mutation",
     "id": "band_lv1",
     "name": "絆RANK 1",
-    "description": "日々を共に乗り越え、友人と呼べる仲になりました。\n全ステータス+1、移動・攻撃コスト-10%",
+    "description": "日々を共に乗り越え、友人と呼べる仲になりました。\n全ステータス+1、移動コスト-10%",
     "points": 0,
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
     "enchantments": [
       {
-        "values": [ { "value": "MAX_HP", "add": 3 }, { "value": "STRENGTH", "add": 1 }, { "value": "DEXTERITY", "add": 1 }, { "value": "INTELLIGENCE", "add": 1 }, { "value": "PERCEPTION", "add": 1 }, { "value": "MOVE_COST", "multiply": 0.9 } ]
+        "values": [ { "value": "MAX_HP", "add": 3 }, { "value": "STRENGTH", "add": 1 }, { "value": "DEXTERITY", "add": 1 }, { "value": "INTELLIGENCE", "add": 1 }, { "value": "PERCEPTION", "add": 1 }, { "value": "MOVE_COST", "multiply": -0.1 } ]
       }
     ]
   },
@@ -28,14 +28,14 @@
     "type": "mutation",
     "id": "band_lv2",
     "name": "絆RANK 2",
-    "description": "苦楽を共にすることで、安心して背中を任せられる仲間と言えるようになりました。\n全ステータス+3、移動・攻撃コスト-15%",
+    "description": "苦楽を共にすることで、安心して背中を任せられる仲間と言えるようになりました。\n全ステータス+3、移動コスト-15%",
     "points": 0,
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
     "enchantments": [
       {
-        "values": [ { "value": "MAX_HP", "add": 9 }, { "value": "STRENGTH", "add": 3 }, { "value": "DEXTERITY", "add": 3 }, { "value": "INTELLIGENCE", "add": 3 }, { "value": "PERCEPTION", "add": 3 }, { "value": "MOVE_COST", "multiply": 0.85 } ]
+        "values": [ { "value": "MAX_HP", "add": 9 }, { "value": "STRENGTH", "add": 3 }, { "value": "DEXTERITY", "add": 3 }, { "value": "INTELLIGENCE", "add": 3 }, { "value": "PERCEPTION", "add": 3 }, { "value": "MOVE_COST", "multiply": -0.15 } ]
       }
     ]
   },
@@ -43,14 +43,14 @@
     "type": "mutation",
     "id": "band_lv3",
     "name": "絆RANK 3",
-    "description": "艱難辛苦を共に乗り越えた二人は、既に最高の親友と呼べる仲でしょう！。\n全ステータス+5、移動・攻撃コスト-20%、及び+好感度/50のステータスボーナス\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
+    "description": "艱難辛苦を共に乗り越えた二人は、既に最高の親友と呼べる仲でしょう！。\n全ステータス+5、移動コスト-20%、及び+好感度/50のステータスボーナス\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
     "points": 0,
     "starting_trait": false,
     "valid": false,
     "purifiable": false,
     "enchantments": [
       {
-        "values": [ { "value": "MAX_HP", "add": 15 }, { "value": "STRENGTH", "add": 5 }, { "value": "DEXTERITY", "add": 5 }, { "value": "INTELLIGENCE", "add": 5 }, { "value": "PERCEPTION", "add": 5 }, { "value": "MOVE_COST", "multiply": 0.8 } ]
+        "values": [ { "value": "MAX_HP", "add": 15 }, { "value": "STRENGTH", "add": 5 }, { "value": "DEXTERITY", "add": 5 }, { "value": "INTELLIGENCE", "add": 5 }, { "value": "PERCEPTION", "add": 5 }, { "value": "MOVE_COST", "multiply": -0.2 } ]
       }
     ]
   },
@@ -58,7 +58,7 @@
     "type": "mutation",
     "id": "band_lv4",
     "name": "絆RANK EX",
-    "description": "特別強い絆で結ばれた恋人、あるいはそれ以上と言えるパートナーです！\n全ステータス+7、移動・攻撃コスト-30%、及び+好感度/100のステータスボーナス、\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
+    "description": "特別強い絆で結ばれた恋人、あるいはそれ以上と言えるパートナーです！\n全ステータス+7、移動コスト-30%、及び+好感度/100のステータスボーナス、\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
     "points": 0,
     "starting_trait": false,
     "valid": false,
@@ -71,7 +71,7 @@
           { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
           { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
           { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 100 + 7" ] } },
-          { "value": "MOVE_COST", "multiply": 0.7 }
+          { "value": "MOVE_COST", "multiply": -0.3 }
         ]
       }
     ]
@@ -80,7 +80,7 @@
     "type": "mutation",
     "id": "band_lv5",
     "name": "絆RANK EX+",
-    "description": "もはや言葉は無くとも相手の考えが伝わってきます。間違いなく、生涯を共にするパートナーだと断言できます！\n全ステータス+7、移動・攻撃コスト-35%、及び+好感度/50のステータスボーナス\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
+    "description": "もはや言葉は無くとも相手の考えが伝わってきます。間違いなく、生涯を共にするパートナーだと断言できます！\n全ステータス+7、移動コスト-35%、及び+好感度/50のステータスボーナス\nさらに好感度50以上で致死量のダメージを受けた時に好感度を-30して食いしばる。",
     "points": 0,
     "starting_trait": false,
     "valid": false,
@@ -94,7 +94,7 @@
           { "value": "DEXTERITY", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
           { "value": "INTELLIGENCE", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
           { "value": "PERCEPTION", "add": { "math": [ "u_counter_var_love_points_love_point / 50 + 7" ] } },
-          { "value": "MOVE_COST", "multiply": 0.65 }
+          { "value": "MOVE_COST", "multiply": -0.35 }
         ]
       }
     ]
@@ -105,7 +105,7 @@
     "name": { "str": "仲間の助力" },
     "points": 0,
     "description": "仲間の助力により製作効率が上がっています。製作速度が+100%上昇します。",
-    "crafting_speed_multiplier": 2
+    "enchantments": [ { "values": [ { "value": "CRAFTING_SPEED_MULTIPLIER", "multiply": 2 } ] } ]
   },
   {
     "type": "effect_type",
