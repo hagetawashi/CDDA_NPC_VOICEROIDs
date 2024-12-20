@@ -94,7 +94,6 @@
     },
     "effect": [
       { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(3) + 2" ] },
-      { "math": [ "u_timer_fun_rnd_u_waiting_on_play", "=", "time('now')" ] },
       { "u_add_effect": "band_talk_end", "duration": "8 hours" }
     ]
   }

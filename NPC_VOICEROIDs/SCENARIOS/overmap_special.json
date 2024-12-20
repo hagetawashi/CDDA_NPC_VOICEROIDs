@@ -6,10 +6,8 @@
     "overmaps": [
       { "point": [ 0, 0, 0 ], "overmap": "cabin_voiro_north" },
       { "point": [ 0, 0, 1 ], "overmap": "cabin_roof_1_north" },
-      { "point": [ 0, 1, 0 ], "overmap": "rural_road_forest_ns" },
-      { "point": [ 0, 2, 0 ], "overmap": "rural_road_forest_ns" },
-      { "point": [ 0, 3, 0 ], "overmap": "rural_road_forest_ns" },
-      { "point": [ 0, 4, 0 ], "locations": [ "land", "road" ] }
+      { "point": [ 0, 2, 0 ], "overmap": "dirt_road_forest_north" },
+      { "point": [ 0, 3, 0 ], "overmap": "dirt_road_forest_north" }
     ],
     "locations": [ "forest" ],
     "city_distance": [ 25, 10 ],

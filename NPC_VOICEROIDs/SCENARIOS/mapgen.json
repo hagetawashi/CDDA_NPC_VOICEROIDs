@@ -11,18 +11,18 @@
         "...........~~...........",
         "...%.......~~...........",
         "**######w##++#########**",
-        "**#R  d#sT#  #A DBBD #**",
-        "**#R  c#  #  #A  BB  w**",
-        "**wR   #  =  =       w**",
-        "**wR   #  #  #########**",
-        "**#R   ####  =  DBBD #**",
-        "**#Ŗ   L##A  #A  BB  w**",
-        "**####=####  #A      w**",
-        "**#ttb  uu#  #########**",
-        "**wttb   u#  #  OOOť w**",
-        "**wbb     =  =  87rrrw**",
-        "**#      u#  #   6rSr#**",
-        "**#1F5S234#  #a $9rrŔ#**",
+        "**#                  #**",
+        "**#                  w**",
+        "**w                  w**",
+        "**w                  #**",
+        "**#                  #**",
+        "**#                  w**",
+        "**#                  w**",
+        "**#                  #**",
+        "**w                  w**",
+        "**w                  w**",
+        "**#                  #**",
+        "**#                  #**",
         "**###ww####++####ww###**",
         "..o bbbb     =~~~~~~~o..",
         "..-          #~~~~~~~#..",
@@ -40,10 +40,16 @@
         "Ŗ": [ { "item": "compbow" }, { "item": "arrow_cf", "amount": 12 }, { "item": "quiver" } ]
       },
       "items": {
-        "6": { "item": "voiro_atomic_poipon_u92_map", "chance": 100 },
+        "6": { "item": "chris_body", "chance": 100 },
         "Ŕ": { "item": "stash_wood", "chance": 100, "repeat": [ 2, 4 ] },
         "$": { "item": "used_1st_aid", "chance": 100 },
         "ť": { "item": "ammo_can_shot_part", "chance": 100 }
+      },
+      "fields": {
+        "6": { "field": "fd_blood", "intensity": 1 },
+        "7": { "field": "fd_blood", "intensity": 3 },
+        "9": { "field": "fd_blood", "intensity": 2 },
+        "$": { "field": "fd_blood", "intensity": 1 }
       },
       "furniture": { "9": "f_floor_mattress", "ť": "f_table", "Ŕ": "f_rack", "Ŗ": "f_utility_shelf" },
       "terrain": {
@@ -56,9 +62,9 @@
     }
   },
   {
-    "id": "voiro_atomic_poipon_u92_map",
+    "id": "chris_body",
     "type": "item_group",
     "subtype": "collection",
-    "entries": [ { "item": "ax" }, { "item": "voiro_atomic_poipon_u92" }, { "item": "chocolate" } ]
+    "entries": [ { "item": "ax" }, { "item": "corpse_gunned", "damage": 4 } ]
   }
 ]
